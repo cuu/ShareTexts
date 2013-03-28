@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
+		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
+		F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F71702603D009E5FCA /* Foundation.framework */; };
+		F7A936FA1702603D009E5FCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F91702603D009E5FCA /* CoreGraphics.framework */; };
+		F7A937001702603D009E5FCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7A936FE1702603D009E5FCA /* InfoPlist.strings */; };
+		F7A937021702603D009E5FCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A937011702603D009E5FCA /* main.m */; };
+		F7A937061702603D009E5FCA /* ShareTextsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A937051702603D009E5FCA /* ShareTextsAppDelegate.m */; };
+		F7A937081702603D009E5FCA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A937071702603D009E5FCA /* Default.png */; };
+		F7A9370A1702603D009E5FCA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A937091702603D009E5FCA /* Default@2x.png */; };
+		F7A9370C1702603D009E5FCA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9370B1702603D009E5FCA /* Default-568h@2x.png */; };
+		F7A9370F1702603D009E5FCA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A9370D1702603D009E5FCA /* MainStoryboard.storyboard */; };
+		F7A937121702603D009E5FCA /* ShareTextsFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */; };
+		F7A937141702603D009E5FCA /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A937131702603D009E5FCA /* first.png */; };
+		F7A937161702603D009E5FCA /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A937151702603D009E5FCA /* first@2x.png */; };
+		F7A937191702603D009E5FCA /* ShareTextsSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */; };
+		F7A9371B1702603D009E5FCA /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371A1702603D009E5FCA /* second.png */; };
+		F7A9371D1702603D009E5FCA /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371C1702603D009E5FCA /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTextsTableViewController.h; sourceTree = "<group>"; };
+		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTextsTableViewController.m; sourceTree = "<group>"; };
+		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A936F51702603D009E5FCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7A936F71702603D009E5FCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7A936F91702603D009E5FCA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F7A936FD1702603D009E5FCA /* ShareTexts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShareTexts-Info.plist"; sourceTree = "<group>"; };
+		F7A936FF1702603D009E5FCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7A937011702603D009E5FCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7A937031702603D009E5FCA /* ShareTexts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShareTexts-Prefix.pch"; sourceTree = "<group>"; };
+		F7A937041702603D009E5FCA /* ShareTextsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareTextsAppDelegate.h; sourceTree = "<group>"; };
+		F7A937051702603D009E5FCA /* ShareTextsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareTextsAppDelegate.m; sourceTree = "<group>"; };
+		F7A937071702603D009E5FCA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F7A937091702603D009E5FCA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F7A9370B1702603D009E5FCA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F7A9370E1702603D009E5FCA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareTextsFirstViewController.h; sourceTree = "<group>"; };
+		F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareTextsFirstViewController.m; sourceTree = "<group>"; };
+		F7A937131702603D009E5FCA /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		F7A937151702603D009E5FCA /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareTextsSecondViewController.h; sourceTree = "<group>"; };
+		F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareTextsSecondViewController.m; sourceTree = "<group>"; };
+		F7A9371A1702603D009E5FCA /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		F7A9371C1702603D009E5FCA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7A936EF1702603D009E5FCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */,
+				F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */,
+				F7A936FA1702603D009E5FCA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7A936E91702603D009E5FCA = {
+			isa = PBXGroup;
+			children = (
+				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
+				F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */,
+				F7A936FB1702603D009E5FCA /* ShareTexts */,
+				F7A936F41702603D009E5FCA /* Frameworks */,
+				F7A936F31702603D009E5FCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7A936F31702603D009E5FCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7A936F21702603D009E5FCA /* ShareTexts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7A936F41702603D009E5FCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7A936F51702603D009E5FCA /* UIKit.framework */,
+				F7A936F71702603D009E5FCA /* Foundation.framework */,
+				F7A936F91702603D009E5FCA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7A936FB1702603D009E5FCA /* ShareTexts */ = {
+			isa = PBXGroup;
+			children = (
+				F7A937041702603D009E5FCA /* ShareTextsAppDelegate.h */,
+				F7A937051702603D009E5FCA /* ShareTextsAppDelegate.m */,
+				F7A9370D1702603D009E5FCA /* MainStoryboard.storyboard */,
+				F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */,
+				F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */,
+				F7A937131702603D009E5FCA /* first.png */,
+				F7A937151702603D009E5FCA /* first@2x.png */,
+				F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */,
+				F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */,
+				F7A9371A1702603D009E5FCA /* second.png */,
+				F7A9371C1702603D009E5FCA /* second@2x.png */,
+				F7A936FC1702603D009E5FCA /* Supporting Files */,
+			);
+			path = ShareTexts;
+			sourceTree = "<group>";
+		};
+		F7A936FC1702603D009E5FCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7A936FD1702603D009E5FCA /* ShareTexts-Info.plist */,
+				F7A936FE1702603D009E5FCA /* InfoPlist.strings */,
+				F7A937011702603D009E5FCA /* main.m */,
+				F7A937031702603D009E5FCA /* ShareTexts-Prefix.pch */,
+				F7A937071702603D009E5FCA /* Default.png */,
+				F7A937091702603D009E5FCA /* Default@2x.png */,
+				F7A9370B1702603D009E5FCA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7A936F11702603D009E5FCA /* ShareTexts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7A937201702603D009E5FCA /* Build configuration list for PBXNativeTarget "ShareTexts" */;
+			buildPhases = (
+				F7A936EE1702603D009E5FCA /* Sources */,
+				F7A936EF1702603D009E5FCA /* Frameworks */,
+				F7A936F01702603D009E5FCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareTexts;
+			productName = ShareTexts;
+			productReference = F7A936F21702603D009E5FCA /* ShareTexts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7A936EA1702603D009E5FCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ShareTexts;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = stavro;
+			};
+			buildConfigurationList = F7A936ED1702603D009E5FCA /* Build configuration list for PBXProject "ShareTexts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7A936E91702603D009E5FCA;
+			productRefGroup = F7A936F31702603D009E5FCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7A936F11702603D009E5FCA /* ShareTexts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7A936F01702603D009E5FCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A937001702603D009E5FCA /* InfoPlist.strings in Resources */,
+				F7A937081702603D009E5FCA /* Default.png in Resources */,
+				F7A9370A1702603D009E5FCA /* Default@2x.png in Resources */,
+				F7A9370C1702603D009E5FCA /* Default-568h@2x.png in Resources */,
+				F7A9370F1702603D009E5FCA /* MainStoryboard.storyboard in Resources */,
+				F7A937141702603D009E5FCA /* first.png in Resources */,
+				F7A937161702603D009E5FCA /* first@2x.png in Resources */,
+				F7A9371B1702603D009E5FCA /* second.png in Resources */,
+				F7A9371D1702603D009E5FCA /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7A936EE1702603D009E5FCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A937021702603D009E5FCA /* main.m in Sources */,
+				F7A937061702603D009E5FCA /* ShareTextsAppDelegate.m in Sources */,
+				F7A937121702603D009E5FCA /* ShareTextsFirstViewController.m in Sources */,
+				F7A937191702603D009E5FCA /* ShareTextsSecondViewController.m in Sources */,
+				F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F7A936FE1702603D009E5FCA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7A936FF1702603D009E5FCA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7A9370D1702603D009E5FCA /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7A9370E1702603D009E5FCA /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7A9371E1702603D009E5FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F7A9371F1702603D009E5FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7A937211702603D009E5FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShareTexts/ShareTexts-Prefix.pch";
+				INFOPLIST_FILE = "ShareTexts/ShareTexts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F7A937221702603D009E5FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShareTexts/ShareTexts-Prefix.pch";
+				INFOPLIST_FILE = "ShareTexts/ShareTexts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7A936ED1702603D009E5FCA /* Build configuration list for PBXProject "ShareTexts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A9371E1702603D009E5FCA /* Debug */,
+				F7A9371F1702603D009E5FCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7A937201702603D009E5FCA /* Build configuration list for PBXNativeTarget "ShareTexts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A937211702603D009E5FCA /* Debug */,
+				F7A937221702603D009E5FCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7A936EA1702603D009E5FCA /* Project object */;
+}
