@@ -45,7 +45,9 @@
 		
 		AGImagePickerController *imagePickerController = [[AGImagePickerController alloc] initWithFailureBlock:^(NSError *error) {
 				
-				if (error == nil)
+				
+				
+						if (error == nil)
 				{
 						NSLog(@"User has cancelled.");
 						//[self dismissModalViewControllerAnimated:YES];
@@ -81,6 +83,8 @@
 		[self presentViewController:imagePickerController animated:YES
 										 completion:^{
 												 
+												 
+												
 										 }];
 		
 }

@@ -17,6 +17,7 @@
 		6007A02F1707FBA300B3891B /* AGIPCToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0251707FBA300B3891B /* AGIPCToolbarItem.m */; };
 		6007A0301707FBA300B3891B /* ALAsset+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0271707FBA300B3891B /* ALAsset+AGIPC.m */; };
 		6007A0321707FDEB00B3891B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6007A0311707FDEB00B3891B /* AssetsLibrary.framework */; };
+		6007A034170858FB00B3891B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6007A033170858FB00B3891B /* MessageUI.framework */; };
 		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
 		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
 		F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F71702603D009E5FCA /* Foundation.framework */; };
@@ -56,6 +57,7 @@
 		6007A0261707FBA300B3891B /* ALAsset+AGIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+AGIPC.h"; sourceTree = "<group>"; };
 		6007A0271707FBA300B3891B /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
 		6007A0311707FDEB00B3891B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		6007A033170858FB00B3891B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
 		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6007A034170858FB00B3891B /* MessageUI.framework in Frameworks */,
 				6007A0321707FDEB00B3891B /* AssetsLibrary.framework in Frameworks */,
 				F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */,
 				F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */,
@@ -158,6 +161,7 @@
 		F7A936E91702603D009E5FCA = {
 			isa = PBXGroup;
 			children = (
+				6007A033170858FB00B3891B /* MessageUI.framework */,
 				6007A0311707FDEB00B3891B /* AssetsLibrary.framework */,
 				6007A0151707FBA300B3891B /* AGImagePickerController */,
 				F7A936FB1702603D009E5FCA /* ShareTexts */,
