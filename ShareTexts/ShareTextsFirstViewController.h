@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShareTextsFirstViewController : UIViewController 
+@interface ShareTextsFirstViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @end

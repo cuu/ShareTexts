@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6007A0281707FBA300B3891B /* AGImagePickerController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0171707FBA300B3891B /* AGImagePickerController+Helper.m */; };
+		6007A0291707FBA300B3891B /* AGImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6007A0181707FBA300B3891B /* AGImagePickerController.bundle */; };
+		6007A02A1707FBA300B3891B /* AGImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A01A1707FBA300B3891B /* AGImagePickerController.m */; };
+		6007A02B1707FBA300B3891B /* AGIPCAlbumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A01D1707FBA300B3891B /* AGIPCAlbumsController.m */; };
+		6007A02C1707FBA300B3891B /* AGIPCAssetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A01F1707FBA300B3891B /* AGIPCAssetsController.m */; };
+		6007A02D1707FBA300B3891B /* AGIPCGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0211707FBA300B3891B /* AGIPCGridCell.m */; };
+		6007A02E1707FBA300B3891B /* AGIPCGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0231707FBA300B3891B /* AGIPCGridItem.m */; };
+		6007A02F1707FBA300B3891B /* AGIPCToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0251707FBA300B3891B /* AGIPCToolbarItem.m */; };
+		6007A0301707FBA300B3891B /* ALAsset+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0271707FBA300B3891B /* ALAsset+AGIPC.m */; };
+		6007A0321707FDEB00B3891B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6007A0311707FDEB00B3891B /* AssetsLibrary.framework */; };
 		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
 		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
 		F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F71702603D009E5FCA /* Foundation.framework */; };
@@ -27,8 +37,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTextsTableViewController.h; sourceTree = "<group>"; };
-		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTextsTableViewController.m; sourceTree = "<group>"; };
+		6007A0161707FBA300B3891B /* AGImagePickerController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGImagePickerController+Helper.h"; sourceTree = "<group>"; };
+		6007A0171707FBA300B3891B /* AGImagePickerController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGImagePickerController+Helper.m"; sourceTree = "<group>"; };
+		6007A0181707FBA300B3891B /* AGImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AGImagePickerController.bundle; sourceTree = "<group>"; };
+		6007A0191707FBA300B3891B /* AGImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImagePickerController.h; sourceTree = "<group>"; };
+		6007A01A1707FBA300B3891B /* AGImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGImagePickerController.m; sourceTree = "<group>"; };
+		6007A01B1707FBA300B3891B /* AGImagePickerControllerDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImagePickerControllerDefines.h; sourceTree = "<group>"; };
+		6007A01C1707FBA300B3891B /* AGIPCAlbumsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCAlbumsController.h; sourceTree = "<group>"; };
+		6007A01D1707FBA300B3891B /* AGIPCAlbumsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCAlbumsController.m; sourceTree = "<group>"; };
+		6007A01E1707FBA300B3891B /* AGIPCAssetsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCAssetsController.h; sourceTree = "<group>"; };
+		6007A01F1707FBA300B3891B /* AGIPCAssetsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCAssetsController.m; sourceTree = "<group>"; };
+		6007A0201707FBA300B3891B /* AGIPCGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCGridCell.h; sourceTree = "<group>"; };
+		6007A0211707FBA300B3891B /* AGIPCGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCGridCell.m; sourceTree = "<group>"; };
+		6007A0221707FBA300B3891B /* AGIPCGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCGridItem.h; sourceTree = "<group>"; };
+		6007A0231707FBA300B3891B /* AGIPCGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCGridItem.m; sourceTree = "<group>"; };
+		6007A0241707FBA300B3891B /* AGIPCToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCToolbarItem.h; sourceTree = "<group>"; };
+		6007A0251707FBA300B3891B /* AGIPCToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCToolbarItem.m; sourceTree = "<group>"; };
+		6007A0261707FBA300B3891B /* ALAsset+AGIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+AGIPC.h"; sourceTree = "<group>"; };
+		6007A0271707FBA300B3891B /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
+		6007A0311707FDEB00B3891B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
+		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A936F51702603D009E5FCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7A936F71702603D009E5FCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6007A0321707FDEB00B3891B /* AssetsLibrary.framework in Frameworks */,
 				F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */,
 				F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */,
 				F7A936FA1702603D009E5FCA /* CoreGraphics.framework in Frameworks */,
@@ -67,11 +97,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6007A0121707B9E700B3891B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */,
+				F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */,
+				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
+				F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */,
+				F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */,
+				F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6007A0131707B9FE00B3891B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F7A937131702603D009E5FCA /* first.png */,
+				F7A937151702603D009E5FCA /* first@2x.png */,
+				F7A9371A1702603D009E5FCA /* second.png */,
+				F7A9371C1702603D009E5FCA /* second@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		6007A0141707BA3000B3891B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7A9370D1702603D009E5FCA /* MainStoryboard.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6007A0151707FBA300B3891B /* AGImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				6007A0161707FBA300B3891B /* AGImagePickerController+Helper.h */,
+				6007A0171707FBA300B3891B /* AGImagePickerController+Helper.m */,
+				6007A0181707FBA300B3891B /* AGImagePickerController.bundle */,
+				6007A0191707FBA300B3891B /* AGImagePickerController.h */,
+				6007A01A1707FBA300B3891B /* AGImagePickerController.m */,
+				6007A01B1707FBA300B3891B /* AGImagePickerControllerDefines.h */,
+				6007A01C1707FBA300B3891B /* AGIPCAlbumsController.h */,
+				6007A01D1707FBA300B3891B /* AGIPCAlbumsController.m */,
+				6007A01E1707FBA300B3891B /* AGIPCAssetsController.h */,
+				6007A01F1707FBA300B3891B /* AGIPCAssetsController.m */,
+				6007A0201707FBA300B3891B /* AGIPCGridCell.h */,
+				6007A0211707FBA300B3891B /* AGIPCGridCell.m */,
+				6007A0221707FBA300B3891B /* AGIPCGridItem.h */,
+				6007A0231707FBA300B3891B /* AGIPCGridItem.m */,
+				6007A0241707FBA300B3891B /* AGIPCToolbarItem.h */,
+				6007A0251707FBA300B3891B /* AGIPCToolbarItem.m */,
+				6007A0261707FBA300B3891B /* ALAsset+AGIPC.h */,
+				6007A0271707FBA300B3891B /* ALAsset+AGIPC.m */,
+			);
+			name = AGImagePickerController;
+			path = "../../AGImagePickerController-master/AGImagePickerController";
+			sourceTree = "<group>";
+		};
 		F7A936E91702603D009E5FCA = {
 			isa = PBXGroup;
 			children = (
-				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
-				F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */,
+				6007A0311707FDEB00B3891B /* AssetsLibrary.framework */,
+				6007A0151707FBA300B3891B /* AGImagePickerController */,
 				F7A936FB1702603D009E5FCA /* ShareTexts */,
 				F7A936F41702603D009E5FCA /* Frameworks */,
 				F7A936F31702603D009E5FCA /* Products */,
@@ -99,17 +187,11 @@
 		F7A936FB1702603D009E5FCA /* ShareTexts */ = {
 			isa = PBXGroup;
 			children = (
+				6007A0131707B9FE00B3891B /* images */,
+				6007A0141707BA3000B3891B /* View */,
+				6007A0121707B9E700B3891B /* Controllers */,
 				F7A937041702603D009E5FCA /* ShareTextsAppDelegate.h */,
 				F7A937051702603D009E5FCA /* ShareTextsAppDelegate.m */,
-				F7A9370D1702603D009E5FCA /* MainStoryboard.storyboard */,
-				F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */,
-				F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */,
-				F7A937131702603D009E5FCA /* first.png */,
-				F7A937151702603D009E5FCA /* first@2x.png */,
-				F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */,
-				F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */,
-				F7A9371A1702603D009E5FCA /* second.png */,
-				F7A9371C1702603D009E5FCA /* second@2x.png */,
 				F7A936FC1702603D009E5FCA /* Supporting Files */,
 			);
 			path = ShareTexts;
@@ -190,6 +272,7 @@
 				F7A937161702603D009E5FCA /* first@2x.png in Resources */,
 				F7A9371B1702603D009E5FCA /* second.png in Resources */,
 				F7A9371D1702603D009E5FCA /* second@2x.png in Resources */,
+				6007A0291707FBA300B3891B /* AGImagePickerController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +288,14 @@
 				F7A937121702603D009E5FCA /* ShareTextsFirstViewController.m in Sources */,
 				F7A937191702603D009E5FCA /* ShareTextsSecondViewController.m in Sources */,
 				F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */,
+				6007A0281707FBA300B3891B /* AGImagePickerController+Helper.m in Sources */,
+				6007A02A1707FBA300B3891B /* AGImagePickerController.m in Sources */,
+				6007A02B1707FBA300B3891B /* AGIPCAlbumsController.m in Sources */,
+				6007A02C1707FBA300B3891B /* AGIPCAssetsController.m in Sources */,
+				6007A02D1707FBA300B3891B /* AGIPCGridCell.m in Sources */,
+				6007A02E1707FBA300B3891B /* AGIPCGridItem.m in Sources */,
+				6007A02F1707FBA300B3891B /* AGIPCToolbarItem.m in Sources */,
+				6007A0301707FBA300B3891B /* ALAsset+AGIPC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +346,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -279,7 +370,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -292,6 +383,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareTexts/ShareTexts-Prefix.pch";
 				INFOPLIST_FILE = "ShareTexts/ShareTexts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -303,6 +395,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareTexts/ShareTexts-Prefix.pch";
 				INFOPLIST_FILE = "ShareTexts/ShareTexts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
