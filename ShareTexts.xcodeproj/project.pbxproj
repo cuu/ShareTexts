@@ -36,6 +36,7 @@
 		F7A937191702603D009E5FCA /* ShareTextsSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */; };
 		F7A9371B1702603D009E5FCA /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371A1702603D009E5FCA /* second.png */; };
 		F7A9371D1702603D009E5FCA /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371C1702603D009E5FCA /* second@2x.png */; };
+		F7BEDE6A170C880F000F1108 /* testTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BEDE69170C880F000F1108 /* testTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +62,6 @@
 		6007A0471708749000B3891B /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
 		F72E188D170BE05600CF4962 /* ShareTextsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTextsCell.h; sourceTree = SOURCE_ROOT; };
 		F72E188E170BE05600CF4962 /* ShareTextsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTextsCell.m; sourceTree = SOURCE_ROOT; };
-		F751CA5C170BADC10016F5F9 /* testTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testTableViewController.h; sourceTree = "<group>"; };
-		F751CA5D170BADC10016F5F9 /* testTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTableViewController.m; sourceTree = "<group>"; };
 		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
 		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +86,8 @@
 		F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareTextsSecondViewController.m; sourceTree = "<group>"; };
 		F7A9371A1702603D009E5FCA /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		F7A9371C1702603D009E5FCA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		F7BEDE68170C880F000F1108 /* testTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testTableViewController.h; path = ../testTableViewController.h; sourceTree = "<group>"; };
+		F7BEDE69170C880F000F1108 /* testTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testTableViewController.m; path = ../testTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +109,10 @@
 		6007A0121707B9E700B3891B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7BEDE68170C880F000F1108 /* testTableViewController.h */,
+				F7BEDE69170C880F000F1108 /* testTableViewController.m */,
 				F72E188D170BE05600CF4962 /* ShareTextsCell.h */,
 				F72E188E170BE05600CF4962 /* ShareTextsCell.m */,
-				F751CA5C170BADC10016F5F9 /* testTableViewController.h */,
-				F751CA5D170BADC10016F5F9 /* testTableViewController.m */,
 				F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */,
 				F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */,
 				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
@@ -309,6 +310,7 @@
 				6007A04F1708749000B3891B /* AGIPCToolbarItem.m in Sources */,
 				6007A0501708749000B3891B /* ALAsset+AGIPC.m in Sources */,
 				F72E188F170BE05600CF4962 /* ShareTextsCell.m in Sources */,
+				F7BEDE6A170C880F000F1108 /* testTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

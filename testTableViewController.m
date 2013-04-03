@@ -2,60 +2,17 @@
 //  testTableViewController.m
 //  ShareTexts
 //
-//  Created by stavro on 4/1/13.
+//  Created by stavro on 4/3/13.
 //  Copyright (c) 2013 stavro. All rights reserved.
 //
 
 #import "testTableViewController.h"
-#import "HistoryCell.h"
-#import "AGIPCAssetsController.h"
 
 @interface testTableViewController ()
-
-@property (nonatomic,strong) NSArray *historyArray;
 
 @end
 
 @implementation testTableViewController
-
-
-/* this that we want saved and shown in this table view are
-
-1) recipient (or email address that received email)
-2) # of images sent
-3) date/time the email was sent
-4) when we click on cell, it would be cool to see the screenshots sent
-
-*/
-
-- (NSArray *)historyArray
-{
-    // load from defaults
-    
-    /*
-     
-     {
-     
-     "sentConvos" : [
-     
-     { "recipient" : "Barney",
-     "number" : 2,
-     "date" : "04/01/13"
-     },
-     
-     { "recipient" : "Bamm",
-     "number" : 5,
-     "date" : "04/02/13"
-     }
-     
-     
-     
-     ]
-     
-     }
-     
-     */
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -69,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -88,41 +44,54 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
-
-    MCemail
-    
-
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"HistoryCell";
-    HistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    UITableViewCell *cell;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    
+    //    static NSString *CellIdentifier = @"Cell";
+    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    cell.textLabel.text = @"testing";
+    // in the book the following line of code is: cell.accessoryType = UITableViewCellAccessoryDetailDisclosureIndicator;
+   // cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
     // Configure the cell...
     
-//    cell.textLabel.text = @"text";
-    
-    // cell.recipientLabel.text =
-
-    
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    cell.recipientLabel.text = @"stavro (statically typed)";
-//    cell.numberOfImages.text = [defaults integerForKey:@"NumberOfPicsSent"];
-    //cell.dateSent.text = [defaults objectForKey:@"Date"];
-    
-    cell.textLabel.text = @"hello";
-    
     return cell;
-}
+    
+    
+    
+    
+    
+    
+    
+//    static NSString *CellIdentifier = @"Cell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//    
+//    // Configure the cell...
+//    
+//    cell.textLabel.text = @"hello";
+//    
+//    return cell;
+//}
 
 /*
 // Override to support conditional editing of the table view.
@@ -162,18 +131,20 @@
     return YES;
 }
 */
+    
+}
 
 #pragma mark - Table view delegate
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    // Navigation logic may go here. Create and push another view controller.
-//    /*
-//     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-//     // ...
-//     // Pass the selected object to the new view controller.
-//     [self.navigationController pushViewController:detailViewController animated:YES];
-//     */
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
+}
 
 @end

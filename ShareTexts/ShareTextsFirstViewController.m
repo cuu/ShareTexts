@@ -9,10 +9,11 @@
 #import "ShareTextsFirstViewController.h"
 #import "AGImagePickerController.h"
 #import "ShareTextsCell.h"
+#import "AGIPCAssetsController.h"
 
 @interface ShareTextsFirstViewController ()
 
-@property (strong, nonatomic) ShareTextsCell *cell;
+@property (strong, nonatomic) ShareTextsCell *sharedTextCell;
 
 @end
 
@@ -24,6 +25,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self.tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -163,10 +171,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-
-    self.cell.dateSentLabel.text = [defaults objectForKey:@"Date"];
-    self.cell.recipientSentLabel.text = @"stavro (statically typed)";
-    //self.cell.numberOfPicsSentLabel.text = [defaults integerForKey:@"NumberOfPicsSent"];
+   
+    
+    self.sharedTextCell.dateSentLabel.text = [defaults objectForKey:@"Date"];
+    self.sharedTextCell.recipientSentLabel.text = @"stavro";    
+    NSInteger theNumber = [defaults integerForKey:@"NumberOfPicsSent"];
+    self.sharedTextCell.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i", theNumber];
+    
     
     // in the book the following line of code is: cell.accessoryType = UITableViewCellAccessoryDetailDisclosureIndicator;
     //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
