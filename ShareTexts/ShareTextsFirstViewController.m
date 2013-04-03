@@ -143,7 +143,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 1000;
 }
 
 
@@ -160,23 +160,23 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     //    static NSString *CellIdentifier = @"Cell";
     //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSDate *localDate = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    dateFormatter.dateFormat = @"MM/dd/yy";
-    
-    NSString *dateString = [dateFormatter stringFromDate: localDate];
-    
-    NSLog(@" the date is %@", dateString);
-    
-    
-     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-   
-    
-    self.sharedTextCell.dateSentLabel.text = [defaults objectForKey:@"Date"];
-    self.sharedTextCell.recipientSentLabel.text = @"stavro";    
-    NSInteger theNumber = [defaults integerForKey:@"NumberOfPicsSent"];
-    self.sharedTextCell.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i", theNumber];
+//    NSDate *localDate = [NSDate date];
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+//    dateFormatter.dateFormat = @"MM/dd/yy";
+//    
+//    NSString *dateString = [dateFormatter stringFromDate: localDate];
+//    
+//    NSLog(@" the date is %@", dateString);
+//    
+//    
+//     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//
+//   
+//    
+//    self.sharedTextCell.dateSentLabel.text = [defaults objectForKey:@"Date"];
+//    self.sharedTextCell.recipientSentLabel.text = @"stavro";    
+//    NSInteger theNumber = [defaults integerForKey:@"NumberOfPicsSent"];
+//    self.sharedTextCell.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i", theNumber];
     
     
     // in the book the following line of code is: cell.accessoryType = UITableViewCellAccessoryDetailDisclosureIndicator;

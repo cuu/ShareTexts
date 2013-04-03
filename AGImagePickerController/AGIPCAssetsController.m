@@ -332,11 +332,13 @@
     
     NSLog(@" the date is %@", dateString);
     
-    //SLdatabase
+    //SLdatabase input 
     // save to defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:self.selectedAssets.count forKey:@"NumberOfPicsSent"];
-    [defaults setObject:dateString forKey:@"Date"];
+        
+   //     [defaults setObject:<#(id)#> forKey:@recipient"];
+         [defaults setInteger:self.selectedAssets.count forKey:@"numberOfPicsSent"];
+         [defaults setObject:dateString forKey:@"Date"];
     
     // the email recipient
     //[defaults]

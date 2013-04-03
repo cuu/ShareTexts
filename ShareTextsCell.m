@@ -24,6 +24,27 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    
+    //SLdatabase output 
+    
+    NSDate *localDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    dateFormatter.dateFormat = @"MM/dd/yy";
+    NSString *dateString = [dateFormatter stringFromDate: localDate];
+    NSLog(@" the date is %@", dateString);
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.dateSentLabel.text = [defaults objectForKey:@"Date"];
+    
+    //Recipient 
+    self.recipientSentLabel.text = @"stavro";
+    //self.recipientSentLabel.text = [defaults objectForKey:@"recipient"];
+    
+    NSInteger theNumber = [defaults integerForKey:@"numberOfPicsSent"];
+    self.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i", theNumber];
+
 }
+
 
 @end
