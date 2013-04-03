@@ -1,14 +1,14 @@
 //
-//  HistoryCell.m
+//  ShareTextsCell.m
 //  ShareTexts
 //
-//  Created by stavro on 4/1/13.
+//  Created by stavro on 4/2/13.
 //  Copyright (c) 2013 stavro. All rights reserved.
 //
 
-#import "HistoryCell.h"
+#import "ShareTextsCell.h"
 
-@implementation HistoryCell
+@implementation ShareTextsCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
