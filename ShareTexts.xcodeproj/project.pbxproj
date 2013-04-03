@@ -58,6 +58,10 @@
 		6007A0451708749000B3891B /* AGIPCToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCToolbarItem.m; sourceTree = "<group>"; };
 		6007A0461708749000B3891B /* ALAsset+AGIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+AGIPC.h"; sourceTree = "<group>"; };
 		6007A0471708749000B3891B /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
+		F751CA5C170BADC10016F5F9 /* testTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testTableViewController.h; sourceTree = "<group>"; };
+		F751CA5D170BADC10016F5F9 /* testTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTableViewController.m; sourceTree = "<group>"; };
+		F751CA5E170BADC10016F5F9 /* HistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
+		F751CA5F170BADC10016F5F9 /* HistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
 		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
 		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,10 @@
 		6007A0121707B9E700B3891B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F751CA5C170BADC10016F5F9 /* testTableViewController.h */,
+				F751CA5D170BADC10016F5F9 /* testTableViewController.m */,
+				F751CA5E170BADC10016F5F9 /* HistoryCell.h */,
+				F751CA5F170BADC10016F5F9 /* HistoryCell.m */,
 				F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */,
 				F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */,
 				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,

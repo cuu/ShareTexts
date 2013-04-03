@@ -235,7 +235,7 @@
 		
 		
 		//testemail "Send Email" button
-		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 100, 70)];
+		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 250, 100, 70)];
 		[shareButton  addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
 		[shareButton setTitle:@"Send Email" forState:UIControlStateNormal];
 		[shareButton setBackgroundColor:[UIColor blueColor]];
@@ -314,6 +314,19 @@
 				[alert show];
 		}
 		*/
+    
+    
+    // save to defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    
+    [defaults setInteger:self.selectedAssets.count forKey:@"NumberOfPicsSent"];
+    [defaults setObject:dateString forKey:@"Date"];
+    
+    // the email recipient
+    //[defaults]
+    
+    [defaults synchronize];
 }
 
 
