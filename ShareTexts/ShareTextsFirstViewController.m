@@ -8,10 +8,14 @@
 
 #import "ShareTextsFirstViewController.h"
 #import "AGImagePickerController.h"
+#import "ShareTextsCell.h"
 
 @interface ShareTextsFirstViewController ()
 
+@property (strong, nonatomic) ShareTextsCell *cell;
+
 @end
+
 
 @implementation ShareTextsFirstViewController
 
@@ -29,6 +33,8 @@
 
 - (IBAction)addConversationButton:(id)sender
 {
+    NSLog(@"add convo button tapped");
+    
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
         UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
         
@@ -119,6 +125,66 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 		[self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"ShareTextsCell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ShareTextsCell"];
+    }
+    
+    
+    //    static NSString *CellIdentifier = @"Cell";
+    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    NSDate *localDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    dateFormatter.dateFormat = @"MM/dd/yy";
+    
+    NSString *dateString = [dateFormatter stringFromDate: localDate];
+    
+    NSLog(@" the date is %@", dateString);
+    
+    
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+
+    self.cell.dateSentLabel.text = [defaults objectForKey:@"Date"];
+    self.cell.recipientSentLabel.text = @"stavro (statically typed)";
+    //self.cell.numberOfPicsSentLabel.text = [defaults integerForKey:@"NumberOfPicsSent"];
+    
+    // in the book the following line of code is: cell.accessoryType = UITableViewCellAccessoryDetailDisclosureIndicator;
+    //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    
+    
+    //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //    cell.recipientLabel.text = @"stavro (statically typed)";
+    //    cell.numberOfImages.text = [defaults integerForKey:@"NumberOfPicsSent"];
+    //cell.dateSent.text = [defaults objectForKey:@"Date"];
+    
+    // Configure the cell...
+    
+    return cell;
+    
+
+}
+
+
 
 
 @end

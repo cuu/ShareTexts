@@ -10,4 +10,12 @@
 
 @interface ShareTextsCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *recipientSentLabel;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *numberOfPicsSentLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *dateSentLabel;
+
+
 @end

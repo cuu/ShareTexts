@@ -18,6 +18,7 @@
 		6007A04E1708749000B3891B /* AGIPCGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0431708749000B3891B /* AGIPCGridItem.m */; };
 		6007A04F1708749000B3891B /* AGIPCToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0451708749000B3891B /* AGIPCToolbarItem.m */; };
 		6007A0501708749000B3891B /* ALAsset+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0471708749000B3891B /* ALAsset+AGIPC.m */; };
+		F72E188F170BE05600CF4962 /* ShareTextsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F72E188E170BE05600CF4962 /* ShareTextsCell.m */; };
 		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
 		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
 		F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F71702603D009E5FCA /* Foundation.framework */; };
@@ -58,10 +59,10 @@
 		6007A0451708749000B3891B /* AGIPCToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCToolbarItem.m; sourceTree = "<group>"; };
 		6007A0461708749000B3891B /* ALAsset+AGIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+AGIPC.h"; sourceTree = "<group>"; };
 		6007A0471708749000B3891B /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
+		F72E188D170BE05600CF4962 /* ShareTextsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTextsCell.h; sourceTree = SOURCE_ROOT; };
+		F72E188E170BE05600CF4962 /* ShareTextsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTextsCell.m; sourceTree = SOURCE_ROOT; };
 		F751CA5C170BADC10016F5F9 /* testTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testTableViewController.h; sourceTree = "<group>"; };
 		F751CA5D170BADC10016F5F9 /* testTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTableViewController.m; sourceTree = "<group>"; };
-		F751CA5E170BADC10016F5F9 /* HistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
-		F751CA5F170BADC10016F5F9 /* HistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
 		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
 		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,10 +108,10 @@
 		6007A0121707B9E700B3891B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F72E188D170BE05600CF4962 /* ShareTextsCell.h */,
+				F72E188E170BE05600CF4962 /* ShareTextsCell.m */,
 				F751CA5C170BADC10016F5F9 /* testTableViewController.h */,
 				F751CA5D170BADC10016F5F9 /* testTableViewController.m */,
-				F751CA5E170BADC10016F5F9 /* HistoryCell.h */,
-				F751CA5F170BADC10016F5F9 /* HistoryCell.m */,
 				F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */,
 				F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */,
 				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
@@ -307,6 +308,7 @@
 				6007A04E1708749000B3891B /* AGIPCGridItem.m in Sources */,
 				6007A04F1708749000B3891B /* AGIPCToolbarItem.m in Sources */,
 				6007A0501708749000B3891B /* ALAsset+AGIPC.m in Sources */,
+				F72E188F170BE05600CF4962 /* ShareTextsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

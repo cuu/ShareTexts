@@ -269,7 +269,7 @@
 		controller.navigationBar.tintColor = [UIColor blackColor];
 		[controller setMessageBody:htmlMsg isHTML:NO];
 		//[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
-		//[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
+		[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
 		
 		// Pull the image from ALAsset
 		int picCount = self.selectedAssets.count;
@@ -298,6 +298,11 @@
 		if (controller)
 		[self presentViewController:controller animated:YES
 				completion:^{}];
+    
+    
+    
+    
+    
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller
@@ -316,10 +321,20 @@
 		*/
     
     
+    if (result == MFMailComposeResultSaved || result == MFMailComposeResultSent) {
+
+    
+    NSDate *localDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    dateFormatter.dateFormat = @"MM/dd/yy";
+    
+    NSString *dateString = [dateFormatter stringFromDate: localDate];
+    
+    NSLog(@" the date is %@", dateString);
+    
+    //SLdatabase
     // save to defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    
     [defaults setInteger:self.selectedAssets.count forKey:@"NumberOfPicsSent"];
     [defaults setObject:dateString forKey:@"Date"];
     
@@ -327,6 +342,7 @@
     //[defaults]
     
     [defaults synchronize];
+}
 }
 
 

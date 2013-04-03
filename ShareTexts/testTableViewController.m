@@ -114,12 +114,12 @@
     // cell.recipientLabel.text =
 
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    cell.recipientLabel.text = @"stavro (statically typed)";
-    cell.numberOfImages.text = [defaults integerForKey:@"NumberOfPicsSent"];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    cell.recipientLabel.text = @"stavro (statically typed)";
+//    cell.numberOfImages.text = [defaults integerForKey:@"NumberOfPicsSent"];
     //cell.dateSent.text = [defaults objectForKey:@"Date"];
     
-    cell.dateSent.text = @"hello";
+    cell.textLabel.text = @"hello";
     
     return cell;
 }
