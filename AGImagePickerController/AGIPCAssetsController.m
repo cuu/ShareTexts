@@ -234,18 +234,13 @@
 	//self.navigationItem.rightBarButtonItem = doneButtonItem;
 		
 		
-		
-		//testemail
-		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(120, 380, 100, 70)];
-		
+		//testemail "Send Email" button
+		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 100, 70)];
 		[shareButton  addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
 		[shareButton setTitle:@"Send Email" forState:UIControlStateNormal];
-		
 		[shareButton setBackgroundColor:[UIColor blueColor]];
 		[self.view addSubview:shareButton];
 }
-
-
 
 //resize image to send email
 -(UIImage*)resizeImage:(UIImage*)image{
@@ -260,110 +255,57 @@
 //testemail
 - (void)sendEmail:(UIButton *)button {
 		
-		
-		
-		
-		
-		//testemail
-		NSArray *photos = self.selectedAssets;
-		
-		//	NSURL *imageURL = [self.selectedAssets valueForKey:UIImagePickerControllerReferenceURL];
-		
-		ALAsset *asset = [self.selectedAssets objectAtIndex:0];
-		
-		NSURL *imageURL =	asset.defaultRepresentation.url;
-		
-		
-		//not working
-	  	UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]];
-		
-		
-		
-		ALAssetRepresentation *rep = [asset defaultRepresentation];
-		Byte *buffer = (Byte*)malloc(rep.size);
-		NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
-		NSData *data = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
-		
-		UIImage *testImage = [UIImage imageWithData:data];
-		
-		testImage = [self resizeImage:testImage];
-		data = UIImageJPEGRepresentation(testImage, 1);
-		
-
-
-		
-		
-		//testemail
-		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(80, 250, 100, 100)];
-		
-		
-		[shareButton setTitle:@"test" forState:UIControlStateNormal];
-		[shareButton setBackgroundImage:img forState:UIControlStateNormal];
-		
-		[shareButton setBackgroundColor:[UIColor blueColor]];
-		//[self.view addSubview:shareButton];
-		
-		//resize nsdata and create image here and add to my body
-		NSMutableString *messageBody = [[NSMutableString alloc] initWithString:@"<html><body>"] ;
-		
-		//NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(capturedProfileImage)];
-		//UIImage *imageBody  = [UIImage imageWithData:data];
-		//messageBody appendFormat:@"<p><b><img src='data:image/png;base64,%@'>  </b></p>", base64String];
-		//[messageBody appendFormat:@"<p>&nbsp;&nbsp;&nbsp;&nbsp; %@.</p>",userName];
-		//[messageBody appendFormat:@"<p>&nbsp;&nbsp;&nbsp;&nbsp; %@.</p>",userPhone];
-		//[messageBody appendFormat:@"</body></html>"];
-		
-		
-		
-		
-		
-		
-		
-		
+				
+		// Set our email message body
 		NSMutableString *htmlMsg = [NSMutableString string];
 		[htmlMsg appendString:@"<html><body><p>"];
 		[htmlMsg appendString:@"This is your message \n\n\n"];
 		//[htmlMsg appendString:@": %@</p></body></html>"];
 		
-
-		NSData *jpegData = UIImageJPEGRepresentation(img, 1);
 		
-		NSString *fileName = @"test";
-		fileName = [fileName stringByAppendingPathExtension:@"jpeg"];
-		
-		
-		MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
+		MFMailComposeViewController* controller =
+						[[MFMailComposeViewController alloc] init];
 		controller.mailComposeDelegate = self;
+		controller.navigationBar.tintColor = [UIColor blackColor];
 		[controller setMessageBody:htmlMsg isHTML:NO];
 		//[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
-		[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
-
+		//[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
 		
-		controller.navigationBar.tintColor = [UIColor blackColor];
+		// Pull the image from ALAsset
+		int picCount = self.selectedAssets.count;
+		for (int i = 0; i < picCount; i++) {
 		
+				ALAsset *asset = [self.selectedAssets objectAtIndex:i];
+				ALAssetRepresentation *rep = [asset defaultRepresentation];
+				Byte *buffer = (Byte*)malloc(rep.size);
+				NSUInteger buffered = [rep getBytes:buffer
+																 fromOffset:0.0 length:rep.size error:nil];
+				NSData *imageData = [NSData dataWithBytesNoCopy:buffer
+																								 length:buffered freeWhenDone:YES];
+				
+				//Image is too large for email, resize it with our custom method
+				UIImage *dataImage = [UIImage imageWithData:imageData];
+				dataImage = [self resizeImage:dataImage];
+				imageData = UIImageJPEGRepresentation(dataImage, 1);
 		
-		[controller addAttachmentData:data mimeType:@"image/jpeg" fileName:fileName];
+				NSString *fileType = [NSString stringWithFormat:@"file%i.jpeg", i];
+				[controller addAttachmentData:imageData mimeType:@"image/jpeg" fileName:fileType];
+		}
 		
-		[controller setSubject:@"email subject"];
+		[controller setSubject:@"Subject"];
 		[controller setMessageBody:htmlMsg isHTML:YES];
-		
-		
-		
 		
 		if (controller)
 		[self presentViewController:controller animated:YES
 				completion:^{}];
-
-
-
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller
           didFinishWithResult:(MFMailComposeResult)result
                         error:(NSError*)error;
 {
-		[self dismissViewControllerAnimated:YES completion:^{
-		}];
+		[self dismissViewControllerAnimated:YES
+														completion:^{}];
 		/*
 		UIAlertView *alert = [[UIAlertView alloc]
 													initWithTitle: nil message: @"Your complaint has been sent" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -373,10 +315,6 @@
 		}
 		*/
 }
-
-
-
-
 
 
 
