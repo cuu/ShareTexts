@@ -10,10 +10,13 @@
 #import "AGImagePickerController.h"
 #import "ShareTextsCell.h"
 #import "AGIPCAssetsController.h"
+#import "ShareTextsCell.h"
 
 @interface ShareTextsFirstViewController ()
 
 @property (strong, nonatomic) ShareTextsCell *sharedTextCell;
+
+@property (strong, nonatomic) NSArray *historyOfConversations;
 
 @end
 
@@ -24,11 +27,26 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (void)setupDataModel
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    // load from defaults an array of past emails. The array will contain a dictionary for each past email. Each dictionary will contain the recipient, count, and date. Add the current sent email info to this array then resave back into defaults.
+
+    self.historyOfConversations  = [defaults objectForKey:@"convoHisotry"];
+    if (self.historyOfConversations == nil) {
+        self.historyOfConversations = [NSArray array];
+    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    [self setupDataModel];
     [self.tableView reloadData];
 }
 
@@ -42,6 +60,18 @@
 - (IBAction)addConversationButton:(id)sender
 {
     NSLog(@"add convo button tapped");
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+    NSDate *date = [NSDate date];
+
+    NSLog(@"%@", [dateFormatter stringFromDate:date]);
+    
+    
+    
+    
+    
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
         UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
@@ -134,65 +164,55 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 		[self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//#warning Potentially incomplete method implementation.
+//    // Return the number of sections.
+//    return 1;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1000;
+    //the number of emails sent
+    
+    return self.historyOfConversations.count;
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"ShareTextsCell"];
+
+    static NSString *CellIdentifier = @"ShareTextsCell";
+    ShareTextsCell *cell;
+    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ShareTextsCell"];
+        cell = [[ShareTextsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     
-    //    static NSString *CellIdentifier = @"Cell";
-    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    //SLdatabase
+    NSDictionary *currentEmail = self.historyOfConversations[indexPath.row];
     
-//    NSDate *localDate = [NSDate date];
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-//    dateFormatter.dateFormat = @"MM/dd/yy";
-//    
-//    NSString *dateString = [dateFormatter stringFromDate: localDate];
-//    
-//    NSLog(@" the date is %@", dateString);
-//    
-//    
-//     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//
-//   
-//    
-//    self.sharedTextCell.dateSentLabel.text = [defaults objectForKey:@"Date"];
-//    self.sharedTextCell.recipientSentLabel.text = @"stavro";    
-//    NSInteger theNumber = [defaults integerForKey:@"NumberOfPicsSent"];
-//    self.sharedTextCell.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i", theNumber];
+    NSDate *localDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    dateFormatter.dateFormat = @"MM/dd/yy";
+    NSString *dateString = [dateFormatter stringFromDate: localDate];
+    NSLog(@" the date is %@", dateString);
     
     
-    // in the book the following line of code is: cell.accessoryType = UITableViewCellAccessoryDetailDisclosureIndicator;
-    //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.dateSentLabel.text = currentEmail[@"date"];
     
+    //Recipient
+    cell.recipientSentLabel.text = currentEmail[@"recipeint"];
+    //self.recipientSentLabel.text = [defaults objectForKey:@"recipient"];
     
-    //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //    cell.recipientLabel.text = @"stavro (statically typed)";
-    //    cell.numberOfImages.text = [defaults integerForKey:@"NumberOfPicsSent"];
-    //cell.dateSent.text = [defaults objectForKey:@"Date"];
+    NSInteger theNumber = [currentEmail[@"numberOfPicsSent"] intValue];
     
-    // Configure the cell...
+    NSString *image = theNumber > 1 ? @"images" : @"image";
+    cell.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i %@", theNumber, image];
     
     return cell;
-    
-
 }
 
 

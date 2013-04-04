@@ -19,6 +19,10 @@
 		6007A04F1708749000B3891B /* AGIPCToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0451708749000B3891B /* AGIPCToolbarItem.m */; };
 		6007A0501708749000B3891B /* ALAsset+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0471708749000B3891B /* ALAsset+AGIPC.m */; };
 		F72E188F170BE05600CF4962 /* ShareTextsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F72E188E170BE05600CF4962 /* ShareTextsCell.m */; };
+		F73C26CA170E1DB0005628EB /* iPhoneIcon_Small (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26C9170E1DB0005628EB /* iPhoneIcon_Small (1).png */; };
+		F73C26CB170E1DCC005628EB /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26C5170E16BF005628EB /* iPhoneIcon_Big (1).png */; };
+		F73C26CE170E1DF0005628EB /* iPhoneIcon_Small (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */; };
+		F73C26CF170E1DF0005628EB /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */; };
 		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
 		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
 		F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F71702603D009E5FCA /* Foundation.framework */; };
@@ -37,6 +41,10 @@
 		F7A9371B1702603D009E5FCA /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371A1702603D009E5FCA /* second.png */; };
 		F7A9371D1702603D009E5FCA /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371C1702603D009E5FCA /* second@2x.png */; };
 		F7BEDE6A170C880F000F1108 /* testTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BEDE69170C880F000F1108 /* testTableViewController.m */; };
+		F7BEDE6C170D2A20000F1108 /* addConversationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BEDE6B170D2A20000F1108 /* addConversationButton.png */; };
+		F7BEDE6E170D2D34000F1108 /* previousConvosSent.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BEDE6D170D2D34000F1108 /* previousConvosSent.png */; };
+		F7BEDE70170DE67F000F1108 /* nav-bar-background-normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BEDE6F170DE67F000F1108 /* nav-bar-background-normal@2x.png */; };
+		F7BEDE72170DE6B8000F1108 /* header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BEDE71170DE6B8000F1108 /* header@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +70,11 @@
 		6007A0471708749000B3891B /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
 		F72E188D170BE05600CF4962 /* ShareTextsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTextsCell.h; sourceTree = SOURCE_ROOT; };
 		F72E188E170BE05600CF4962 /* ShareTextsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTextsCell.m; sourceTree = SOURCE_ROOT; };
+		F73C26C5170E16BF005628EB /* iPhoneIcon_Big (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Big (1).png"; sourceTree = "<group>"; };
+		F73C26C7170E16F3005628EB /* iPhoneIcon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneIcon_small.png; sourceTree = "<group>"; };
+		F73C26C9170E1DB0005628EB /* iPhoneIcon_Small (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Small (1).png"; sourceTree = "<group>"; };
+		F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Small (1).png"; sourceTree = "<group>"; };
+		F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Big (1).png"; sourceTree = "<group>"; };
 		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
 		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +101,10 @@
 		F7A9371C1702603D009E5FCA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		F7BEDE68170C880F000F1108 /* testTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testTableViewController.h; path = ../testTableViewController.h; sourceTree = "<group>"; };
 		F7BEDE69170C880F000F1108 /* testTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testTableViewController.m; path = ../testTableViewController.m; sourceTree = "<group>"; };
+		F7BEDE6B170D2A20000F1108 /* addConversationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addConversationButton.png; sourceTree = "<group>"; };
+		F7BEDE6D170D2D34000F1108 /* previousConvosSent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previousConvosSent.png; sourceTree = "<group>"; };
+		F7BEDE6F170DE67F000F1108 /* nav-bar-background-normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-bar-background-normal@2x.png"; sourceTree = "<group>"; };
+		F7BEDE71170DE6B8000F1108 /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +187,9 @@
 		F7A936E91702603D009E5FCA = {
 			isa = PBXGroup;
 			children = (
+				F73C26C9170E1DB0005628EB /* iPhoneIcon_Small (1).png */,
+				F73C26C7170E16F3005628EB /* iPhoneIcon_small.png */,
+				F73C26C5170E16BF005628EB /* iPhoneIcon_Big (1).png */,
 				6007A0351708749000B3891B /* AGImagePickerController */,
 				6007A033170858FB00B3891B /* MessageUI.framework */,
 				6007A0311707FDEB00B3891B /* AssetsLibrary.framework */,
@@ -213,12 +233,18 @@
 		F7A936FC1702603D009E5FCA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */,
+				F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */,
+				F7BEDE6F170DE67F000F1108 /* nav-bar-background-normal@2x.png */,
+				F7BEDE71170DE6B8000F1108 /* header@2x.png */,
 				F7A936FD1702603D009E5FCA /* ShareTexts-Info.plist */,
 				F7A936FE1702603D009E5FCA /* InfoPlist.strings */,
 				F7A937011702603D009E5FCA /* main.m */,
 				F7A937031702603D009E5FCA /* ShareTexts-Prefix.pch */,
 				F7A937071702603D009E5FCA /* Default.png */,
 				F7A937091702603D009E5FCA /* Default@2x.png */,
+				F7BEDE6B170D2A20000F1108 /* addConversationButton.png */,
+				F7BEDE6D170D2D34000F1108 /* previousConvosSent.png */,
 				F7A9370B1702603D009E5FCA /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
@@ -286,6 +312,14 @@
 				F7A9371B1702603D009E5FCA /* second.png in Resources */,
 				F7A9371D1702603D009E5FCA /* second@2x.png in Resources */,
 				6007A0491708749000B3891B /* AGImagePickerController.bundle in Resources */,
+				F7BEDE6C170D2A20000F1108 /* addConversationButton.png in Resources */,
+				F7BEDE6E170D2D34000F1108 /* previousConvosSent.png in Resources */,
+				F7BEDE70170DE67F000F1108 /* nav-bar-background-normal@2x.png in Resources */,
+				F7BEDE72170DE6B8000F1108 /* header@2x.png in Resources */,
+				F73C26CA170E1DB0005628EB /* iPhoneIcon_Small (1).png in Resources */,
+				F73C26CB170E1DCC005628EB /* iPhoneIcon_Big (1).png in Resources */,
+				F73C26CE170E1DF0005628EB /* iPhoneIcon_Small (1).png in Resources */,
+				F73C26CF170E1DF0005628EB /* iPhoneIcon_Big (1).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

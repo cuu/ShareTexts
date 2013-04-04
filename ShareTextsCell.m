@@ -19,7 +19,7 @@
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+/*- (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
 
@@ -42,9 +42,10 @@
     //self.recipientSentLabel.text = [defaults objectForKey:@"recipient"];
     
     NSInteger theNumber = [defaults integerForKey:@"numberOfPicsSent"];
-    self.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i", theNumber];
+    NSString *image = theNumber > 1 ? @"images" : @"image";
+    self.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i %@", theNumber, image];
 
-}
+}*/
 
 
 @end

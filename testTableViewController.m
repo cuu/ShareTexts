@@ -7,6 +7,7 @@
 //
 
 #import "testTableViewController.h"
+#import "ShareTextsCell.h"
 
 @interface testTableViewController ()
 
@@ -58,40 +59,36 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    UITableViewCell *cell;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    static NSString *CellIdentifier = @"ShareTextsCell";
+    ShareTextsCell *cell;
+    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[ShareTextsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+
     
     
-    //    static NSString *CellIdentifier = @"Cell";
-    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSDate *localDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    dateFormatter.dateFormat = @"MM/dd/yy";
+    NSString *dateString = [dateFormatter stringFromDate: localDate];
+    NSLog(@" the date is %@", dateString);
     
-    cell.textLabel.text = @"testing";
-    // in the book the following line of code is: cell.accessoryType = UITableViewCellAccessoryDetailDisclosureIndicator;
-   // cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    cell.dateSentLabel.text = [defaults objectForKey:@"Date"];
     
-    // Configure the cell...
+    
+    cell.recipientSentLabel.text = @"stavro";
+    //self.recipientSentLabel.text = [defaults objectForKey:@"recipient"];
+    
+    NSInteger theNumber = [defaults integerForKey:@"numberOfPicsSent"];
+    NSString *image = theNumber > 1 ? @"images" : @"image";
+    cell.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i %@", theNumber, image];
     
     return cell;
-    
-    
-    
-    
-    
-    
-    
-//    static NSString *CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    cell.textLabel.text = @"hello";
-//    
-//    return cell;
-//}
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -131,8 +128,7 @@
     return YES;
 }
 */
-    
-}
+
 
 #pragma mark - Table view delegate
 

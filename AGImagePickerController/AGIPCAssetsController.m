@@ -59,6 +59,13 @@
 
 @synthesize assetsGroup = _assetsGroup, assets = _assets, imagePickerController = _imagePickerController;
 
+
+- (UITextField *) recipientTextField
+{
+    if (!_recipientTextField) _recipientTextField = [[UITextField alloc] init];
+    return _recipientTextField;
+}
+
 - (BOOL)toolbarHidden
 {
     if (! self.imagePickerController.shouldShowToolbarForManagingTheSelection)
@@ -233,13 +240,31 @@
     doneButtonItem.enabled = NO;
 	//self.navigationItem.rightBarButtonItem = doneButtonItem;
 		
-		
-		//testemail "Send Email" button
-		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 250, 100, 70)];
-		[shareButton  addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
-		[shareButton setTitle:@"Send Email" forState:UIControlStateNormal];
-		[shareButton setBackgroundColor:[UIColor blueColor]];
-		[self.view addSubview:shareButton];
+    
+    //testemail "Send Email" button
+    UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 360, 300, 40)];
+    [shareButton setBackgroundImage:[UIImage imageNamed:@"nav-bar-background-normal@2x"]forState:UIControlStateNormal];
+    [shareButton  addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
+    [shareButton setTitle:@"Send Email" forState:UIControlStateNormal];
+    [shareButton setBackgroundColor:[UIColor blueColor]];
+    [self.view addSubview:shareButton];
+    
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.font = [UIFont systemFontOfSize:15];
+    textField.text = @"recipient's name";
+    textField.autocorrectionType = UITextAutocorrectionTypeNo;
+    textField.keyboardType = UIKeyboardTypeDefault;
+    textField.returnKeyType = UIReturnKeyDone;
+    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    textField.delegate = self;
+    [self.view addSubview:textField];
+    
+    self.recipientTextField.text = textField.text;
+    NSLog(@"the text field says: %@", self.recipientTextField.text);
+    
 }
 
 //resize image to send email
@@ -270,6 +295,7 @@
 		[controller setMessageBody:htmlMsg isHTML:NO];
 		//[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
 		[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
+    
 		
 		// Pull the image from ALAsset
 		int picCount = self.selectedAssets.count;
@@ -298,12 +324,9 @@
 		if (controller)
 		[self presentViewController:controller animated:YES
 				completion:^{}];
-    
-    
-    
-    
-    
+
 }
+
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller
           didFinishWithResult:(MFMailComposeResult)result
@@ -322,29 +345,37 @@
     
     
     if (result == MFMailComposeResultSaved || result == MFMailComposeResultSent) {
-
-    
-    NSDate *localDate = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    dateFormatter.dateFormat = @"MM/dd/yy";
-    
-    NSString *dateString = [dateFormatter stringFromDate: localDate];
-    
-    NSLog(@" the date is %@", dateString);
-    
-    //SLdatabase input 
-    // save to defaults
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         
-   //     [defaults setObject:<#(id)#> forKey:@recipient"];
-         [defaults setInteger:self.selectedAssets.count forKey:@"numberOfPicsSent"];
-         [defaults setObject:dateString forKey:@"Date"];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+        [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+        NSDate *date = [NSDate date];
+        NSLog(@"%@",[dateFormatter stringFromDate:date]);
+        NSString *dateAndTime = [dateFormatter stringFromDate:date];
+        
+        //SLdatabase input - save to defaults
+        // Load from defaults an array of past emails.
+        // The array will contain a dictionary for each past email.
+        // Each dictionary will contain the recipient, count, and date.
+        // Add the current sent email info to this array then resave back into defaults.
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    // the email recipient
-    //[defaults]
-    
-    [defaults synchronize];
-}
+        NSArray *history = [defaults objectForKey:@"convoHisotry"];
+        
+        if (history == nil) {
+            history = [NSArray array];
+        }
+        
+        NSDictionary *currentEmail = @{@"recipeint": self.recipientTextField.text,
+                                       @"numberOfPicsSent": @(self.selectedAssets.count),
+                                       @"date" : dateAndTime
+                                       };
+        
+        history = [history arrayByAddingObject:currentEmail];
+        [defaults setObject:history forKey:@"convoHisotry"];
+        [defaults synchronize];
+    }
 }
 
 

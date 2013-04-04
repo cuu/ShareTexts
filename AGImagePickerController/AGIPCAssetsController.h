@@ -20,11 +20,13 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 
-@interface AGIPCAssetsController : UITableViewController<UITableViewDataSource, UITableViewDelegate, AGIPCGridItemDelegate, MFMailComposeViewControllerDelegate>
+@interface AGIPCAssetsController : UITableViewController<UITableViewDataSource, UITableViewDelegate, AGIPCGridItemDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate>
 
 @property (strong) ALAssetsGroup *assetsGroup;
 @property (ag_weak, readonly) NSArray *selectedAssets;
 @property (strong) AGImagePickerController *imagePickerController;
+
+@property (strong, nonatomic) UITextField *recipientTextField;
 
 - (id)initWithImagePickerController:(AGImagePickerController *)imagePickerController andAssetsGroup:(ALAssetsGroup *)assetsGroup;
 
