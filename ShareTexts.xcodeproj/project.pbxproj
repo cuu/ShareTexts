@@ -18,6 +18,7 @@
 		6007A04E1708749000B3891B /* AGIPCGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0431708749000B3891B /* AGIPCGridItem.m */; };
 		6007A04F1708749000B3891B /* AGIPCToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0451708749000B3891B /* AGIPCToolbarItem.m */; };
 		6007A0501708749000B3891B /* ALAsset+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007A0471708749000B3891B /* ALAsset+AGIPC.m */; };
+		F701F121170E7C0E000D6EE8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F701F120170E7C0E000D6EE8 /* LogInViewController.m */; };
 		F72E188F170BE05600CF4962 /* ShareTextsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F72E188E170BE05600CF4962 /* ShareTextsCell.m */; };
 		F73C26CA170E1DB0005628EB /* iPhoneIcon_Small (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26C9170E1DB0005628EB /* iPhoneIcon_Small (1).png */; };
 		F73C26CB170E1DCC005628EB /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26C5170E16BF005628EB /* iPhoneIcon_Big (1).png */; };
@@ -68,6 +69,8 @@
 		6007A0451708749000B3891B /* AGIPCToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCToolbarItem.m; sourceTree = "<group>"; };
 		6007A0461708749000B3891B /* ALAsset+AGIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+AGIPC.h"; sourceTree = "<group>"; };
 		6007A0471708749000B3891B /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
+		F701F11F170E7C0E000D6EE8 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		F701F120170E7C0E000D6EE8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		F72E188D170BE05600CF4962 /* ShareTextsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTextsCell.h; sourceTree = SOURCE_ROOT; };
 		F72E188E170BE05600CF4962 /* ShareTextsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTextsCell.m; sourceTree = SOURCE_ROOT; };
 		F73C26C5170E16BF005628EB /* iPhoneIcon_Big (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Big (1).png"; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 		6007A0121707B9E700B3891B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F701F11F170E7C0E000D6EE8 /* LogInViewController.h */,
+				F701F120170E7C0E000D6EE8 /* LogInViewController.m */,
 				F7BEDE68170C880F000F1108 /* testTableViewController.h */,
 				F7BEDE69170C880F000F1108 /* testTableViewController.m */,
 				F72E188D170BE05600CF4962 /* ShareTextsCell.h */,
@@ -345,6 +350,7 @@
 				6007A0501708749000B3891B /* ALAsset+AGIPC.m in Sources */,
 				F72E188F170BE05600CF4962 /* ShareTextsCell.m in Sources */,
 				F7BEDE6A170C880F000F1108 /* testTableViewController.m in Sources */,
+				F701F121170E7C0E000D6EE8 /* LogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +437,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareTexts/ShareTexts-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "ShareTexts/ShareTexts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

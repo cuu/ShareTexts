@@ -13,12 +13,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="P2p-i8-867"/>
+                        <segue destination="UDV-OG-whT" kind="relationship" relationship="rootViewController" id="feZ-lh-E9e"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIW-8C-y05" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1089" y="-1635"/>
+            <point key="canvasLocation" x="-1155" y="-1635"/>
         </scene>
         <!--Share Texts First View Controller - First-->
         <scene sceneID="11">
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-661" y="-1635"/>
+            <point key="canvasLocation" x="-299" y="-1635"/>
         </scene>
         <!--Add Texts Table View Controller-->
         <scene sceneID="r8L-2B-wWK">
@@ -174,7 +174,41 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGx-og-7G2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-165" y="-1635"/>
+            <point key="canvasLocation" x="-299" y="-1061"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="SLp-EU-IYA">
+            <objects>
+                <viewController id="UDV-OG-whT" customClass="LogInViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2dF-ad-8d4">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUd-1d-MGV">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2" kind="push" id="sb7-GV-7a2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pUd-1d-MGV" firstAttribute="centerX" secondItem="2dF-ad-8d4" secondAttribute="centerX" type="default" id="bCy-ed-GyV"/>
+                            <constraint firstAttribute="bottom" secondItem="pUd-1d-MGV" secondAttribute="bottom" constant="40" id="hB2-Vd-hGT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vxw-qM-EhF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85Z-ZV-BxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-730" y="-1635"/>
         </scene>
         <!--Test Table View Controller-->
         <scene sceneID="fyK-om-erA">
@@ -207,7 +241,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CP1-u7-uR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-514" y="-1011"/>
+            <point key="canvasLocation" x="128" y="-1635"/>
         </scene>
     </scenes>
     <resources>
@@ -218,6 +252,9 @@
     <classes>
         <class className="AddTextsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTextsTableViewController.h"/>
+        </class>
+        <class className="LogInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

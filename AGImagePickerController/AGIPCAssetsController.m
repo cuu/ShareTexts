@@ -253,7 +253,7 @@
     UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.font = [UIFont systemFontOfSize:15];
-    textField.text = @"recipient's name";
+    textField.placeholder = @"recipient's name";
     textField.autocorrectionType = UITextAutocorrectionTypeNo;
     textField.keyboardType = UIKeyboardTypeDefault;
     textField.returnKeyType = UIReturnKeyDone;
