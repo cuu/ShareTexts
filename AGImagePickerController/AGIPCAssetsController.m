@@ -60,11 +60,11 @@
 @synthesize assetsGroup = _assetsGroup, assets = _assets, imagePickerController = _imagePickerController;
 
 
-- (UITextField *) recipientTextField
-{
-    if (!_recipientTextField) _recipientTextField = [[UITextField alloc] init];
-    return _recipientTextField;
-}
+//- (UITextField *) recipientTextField
+//{
+//    if (!_recipientTextField) _recipientTextField = [[UITextField alloc] init];
+//    return _recipientTextField;
+//}
 
 - (BOOL)toolbarHidden
 {
@@ -250,7 +250,7 @@
     [self.view addSubview:shareButton];
     
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
+    textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.font = [UIFont systemFontOfSize:15];
     textField.placeholder = @"recipient's name";
@@ -262,7 +262,7 @@
     textField.delegate = self;
     [self.view addSubview:textField];
     
-    self.recipientTextField.text = textField.text;
+    //self.recipientTextField.text = textField.text;
     NSLog(@"the text field says: %@", self.recipientTextField.text);
     
 }
@@ -277,9 +277,39 @@
     return newImage;
 }
 
+-(void) viewDidDisappear:(BOOL)animated
+{
+    
+    
+    self.recipientTextField.text = textField.text;
+}
+
+//- (BOOL)textField:(UITextField *)textField
+//{
+//    [[NSNotificationCenter defaultCenter]
+//     addObserver:self
+//     selector:@selector(viewDidLoad:)
+//     name:UITextFieldTextDidChangeNotification
+//     object:textField];
+//    
+//    return self.recipientTextField.text = textField.text;
+//    
+//}
+
 //testemail
 - (void)sendEmail:(UIButton *)button {
-		
+    
+    if (!textField.text) {
+       
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"You must enter something in textfield"  delegate:self cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
+        
+        [alertView show];
+        
+         return;
+    }
+    
+    // put
 				
 		// Set our email message body
 		NSMutableString *htmlMsg = [NSMutableString string];
@@ -366,6 +396,8 @@
         if (history == nil) {
             history = [NSArray array];
         }
+        
+        
         
         NSDictionary *currentEmail = @{@"recipeint": self.recipientTextField.text,
                                        @"numberOfPicsSent": @(self.selectedAssets.count),

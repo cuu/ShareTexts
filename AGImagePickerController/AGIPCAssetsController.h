@@ -21,6 +21,9 @@
 
 
 @interface AGIPCAssetsController : UITableViewController<UITableViewDataSource, UITableViewDelegate, AGIPCGridItemDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate>
+{
+    UITextField *textField;
+}
 
 @property (strong) ALAssetsGroup *assetsGroup;
 @property (ag_weak, readonly) NSArray *selectedAssets;
