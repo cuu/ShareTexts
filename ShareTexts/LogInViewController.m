@@ -34,10 +34,33 @@
     shareTextsLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:shareTextsLabel];
     
+    self.usernameOrEmailTextField.placeholder = @"username or email";
     
-    
+
+    self.passwordTextField.placeholder = @"email";
     
 }
+
+- (IBAction)logInButton:(id)sender
+{
+    
+}
+
+- (IBAction)signUpButton:(id)sender
+{
+    
+}
+- (IBAction)googleSignInButton:(id)sender
+{
+    
+}
+
+- (IBAction)facebookSignInButton:(id)sender
+{
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
