@@ -38,7 +38,6 @@
 		F7A937121702603D009E5FCA /* ShareTextsFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */; };
 		F7A937141702603D009E5FCA /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A937131702603D009E5FCA /* first.png */; };
 		F7A937161702603D009E5FCA /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A937151702603D009E5FCA /* first@2x.png */; };
-		F7A937191702603D009E5FCA /* ShareTextsSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */; };
 		F7A9371B1702603D009E5FCA /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371A1702603D009E5FCA /* second.png */; };
 		F7A9371D1702603D009E5FCA /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371C1702603D009E5FCA /* second@2x.png */; };
 		F7BEDE6A170C880F000F1108 /* testTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BEDE69170C880F000F1108 /* testTableViewController.m */; };
@@ -50,6 +49,7 @@
 		F7C6FC19170F3BE600F53F51 /* googlebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C6FC18170F3BE600F53F51 /* googlebutton.png */; };
 		F7C6FC1D170F3E0E00F53F51 /* facebookbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C6FC1C170F3E0E00F53F51 /* facebookbutton.png */; };
 		F7C6FC20170F3F6B00F53F51 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6FC1F170F3F6B00F53F51 /* SignUpViewController.m */; };
+		F7C6FC231710A53500F53F51 /* TestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6FC221710A53500F53F51 /* TestTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,8 +102,6 @@
 		F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareTextsFirstViewController.m; sourceTree = "<group>"; };
 		F7A937131702603D009E5FCA /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		F7A937151702603D009E5FCA /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareTextsSecondViewController.h; sourceTree = "<group>"; };
-		F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareTextsSecondViewController.m; sourceTree = "<group>"; };
 		F7A9371A1702603D009E5FCA /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		F7A9371C1702603D009E5FCA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		F7BEDE68170C880F000F1108 /* testTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testTableViewController.h; path = ../testTableViewController.h; sourceTree = "<group>"; };
@@ -117,6 +115,8 @@
 		F7C6FC1C170F3E0E00F53F51 /* facebookbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebookbutton.png; path = ../facebookbutton.png; sourceTree = "<group>"; };
 		F7C6FC1E170F3F6B00F53F51 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		F7C6FC1F170F3F6B00F53F51 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		F7C6FC211710A53500F53F51 /* TestTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableCell.h; sourceTree = "<group>"; };
+		F7C6FC221710A53500F53F51 /* TestTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +146,8 @@
 				F7BEDE69170C880F000F1108 /* testTableViewController.m */,
 				F72E188D170BE05600CF4962 /* ShareTextsCell.h */,
 				F72E188E170BE05600CF4962 /* ShareTextsCell.m */,
-				F7A937171702603D009E5FCA /* ShareTextsSecondViewController.h */,
-				F7A937181702603D009E5FCA /* ShareTextsSecondViewController.m */,
+				F7C6FC211710A53500F53F51 /* TestTableCell.h */,
+				F7C6FC221710A53500F53F51 /* TestTableCell.m */,
 				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
 				F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */,
 				F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */,
@@ -355,7 +355,6 @@
 				F7A937021702603D009E5FCA /* main.m in Sources */,
 				F7A937061702603D009E5FCA /* ShareTextsAppDelegate.m in Sources */,
 				F7A937121702603D009E5FCA /* ShareTextsFirstViewController.m in Sources */,
-				F7A937191702603D009E5FCA /* ShareTextsSecondViewController.m in Sources */,
 				F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */,
 				6007A0481708749000B3891B /* AGImagePickerController+Helper.m in Sources */,
 				6007A04A1708749000B3891B /* AGImagePickerController.m in Sources */,
@@ -369,6 +368,7 @@
 				F7BEDE6A170C880F000F1108 /* testTableViewController.m in Sources */,
 				F701F121170E7C0E000D6EE8 /* LogInViewController.m in Sources */,
 				F7C6FC20170F3F6B00F53F51 /* SignUpViewController.m in Sources */,
+				F7C6FC231710A53500F53F51 /* TestTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,6 +30,43 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     
+    self.lastNameTextField.delegate = self;
+    self.firstNameTextField.delegate = self;
+    self.emailSignUpTextField.delegate = self;
+    self.passwordSignUpTextField.delegate = self;
+    
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [self.lastNameTextField resignFirstResponder];
+    [self.firstNameTextField resignFirstResponder];
+    [self.emailSignUpTextField resignFirstResponder];
+    [self.passwordSignUpTextField resignFirstResponder];
+    return YES;
+}
+
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *userDataBase = [defaults objectForKey:@"userDataBase"];
+    
+    if (userDataBase == nil) {
+        userDataBase = [NSArray array];
+    }
+    
+    NSDictionary *userInfo = @{@"last name": self.lastNameTextField.text,
+                               @"first name": self.firstNameTextField.text,
+                               @"email": self.emailSignUpTextField.text,
+                               @"password": self.passwordSignUpTextField.text};
+    
+    userDataBase = [userDataBase arrayByAddingObject:userInfo];
+    [defaults setObject:userDataBase forKey:@"userDataBase"];
+    [defaults synchronize];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

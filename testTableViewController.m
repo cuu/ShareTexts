@@ -8,6 +8,8 @@
 
 #import "testTableViewController.h"
 #import "ShareTextsCell.h"
+#import "TestTableCell.h"
+#import "SignUpViewController.h"
 
 @interface testTableViewController ()
 
@@ -24,6 +26,13 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self setupDataModel];
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,6 +42,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSLog(@"this is the test table view controller");
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,36 +66,39 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return self.userDateBase.count;
 }
+
+- (void)setupDataModel
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    // load from defaults an array of past emails. The array will contain a dictionary for each past email. Each dictionary will contain the recipient, count, and date. Add the current sent email info to this array then resave back into defaults.
+    
+    self.userDateBase  = [defaults objectForKey:@"userDataBase"];
+    if (self.userDateBase == nil) {
+        self.userDateBase = [NSArray array];
+    }
+    
+}
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ShareTextsCell";
-    ShareTextsCell *cell;
+    static NSString *CellIdentifier = @"TestTableCell";
+    TestTableCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[ShareTextsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[TestTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    NSDictionary *userInfo = self.userDateBase[indexPath.row];
 
-    
-    
-    NSDate *localDate = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    dateFormatter.dateFormat = @"MM/dd/yy";
-    NSString *dateString = [dateFormatter stringFromDate: localDate];
-    NSLog(@" the date is %@", dateString);
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    cell.dateSentLabel.text = [defaults objectForKey:@"Date"];
-    
-    
-    cell.recipientSentLabel.text = @"stavro";
-    //self.recipientSentLabel.text = [defaults objectForKey:@"recipient"];
-    
-    NSInteger theNumber = [defaults integerForKey:@"numberOfPicsSent"];
-    NSString *image = theNumber > 1 ? @"images" : @"image";
-    cell.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i %@", theNumber, image];
+    cell.lastNameLabel.text = userInfo[@"first name"];
+    cell.firstNameLabel.text = userInfo[@"last name"];
+    cell.emailLabel.text = userInfo[@"email"];
+    cell.passwordLabel.text = userInfo[@"password"];
     
     return cell;
 }
