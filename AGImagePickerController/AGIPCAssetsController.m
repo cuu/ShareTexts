@@ -4,10 +4,10 @@
 //
 //  Created by Artur Grigor on 17.02.2012.
 //  Copyright (c) 2012 - 2013 Artur Grigor. All rights reserved.
-//  
+//
 //  For the full copyright and license information, please view the LICENSE
 //  file that was distributed with this source code.
-//  
+//
 
 #import "AGIPCAssetsController.h"
 
@@ -60,11 +60,11 @@
 @synthesize assetsGroup = _assetsGroup, assets = _assets, imagePickerController = _imagePickerController;
 
 
-//- (UITextField *) recipientTextField
-//{
-//    if (!_recipientTextField) _recipientTextField = [[UITextField alloc] init];
-//    return _recipientTextField;
-//}
+- (UITextField *) recipientTextField
+{
+    if (!_recipientTextField) _recipientTextField = [[UITextField alloc] init];
+    return _recipientTextField;
+}
 
 - (BOOL)toolbarHidden
 {
@@ -88,7 +88,7 @@
         {
             _assetsGroup = theAssetsGroup;
             [_assetsGroup setAssetsFilter:[ALAssetsFilter allPhotos]];
-
+						
             [self reloadData];
         }
     }
@@ -110,13 +110,13 @@
 {
     NSMutableArray *selectedAssets = [NSMutableArray array];
     
-	for (AGIPCGridItem *gridItem in self.assets) 
-    {		
-		if (gridItem.selected)
-        {	
-			[selectedAssets addObject:gridItem.asset];
+		for (AGIPCGridItem *gridItem in self.assets)
+    {
+				if (gridItem.selected)
+        {
+						[selectedAssets addObject:gridItem.asset];
+				}
 		}
-	}
     
     return selectedAssets;
 }
@@ -163,8 +163,8 @@
 {
     NSMutableArray *items = [NSMutableArray arrayWithCapacity:self.imagePickerController.numberOfItemsPerRow];
     
-    NSUInteger startIndex = indexPath.row * self.imagePickerController.numberOfItemsPerRow, 
-                 endIndex = startIndex + self.imagePickerController.numberOfItemsPerRow - 1;
+    NSUInteger startIndex = indexPath.row * self.imagePickerController.numberOfItemsPerRow,
+		endIndex = startIndex + self.imagePickerController.numberOfItemsPerRow - 1;
     if (startIndex < self.assets.count)
     {
         if (endIndex > self.assets.count - 1)
@@ -184,14 +184,14 @@
     static NSString *CellIdentifier = @"Cell";
     
     AGIPCGridCell *cell = (AGIPCGridCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) 
-    {		        
+    if (cell == nil)
+    {
         cell = [[AGIPCGridCell alloc] initWithImagePickerController:self.imagePickerController items:[self itemsForRowAtIndexPath:indexPath] andReuseIdentifier:CellIdentifier];
-    }	
-	else 
-    {		
-		cell.items = [self itemsForRowAtIndexPath:indexPath];
-	}
+    }
+		else
+    {
+				cell.items = [self itemsForRowAtIndexPath:indexPath];
+		}
     
     return cell;
 }
@@ -224,6 +224,13 @@
     [super viewWillAppear:animated];
 }
 
+
+- (void)viewDidDisappear:(BOOL)animated {
+		self.recipientTextField.text = textField.text;
+		NSLog(@"tes");
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -238,11 +245,12 @@
     // Navigation Bar Items
     UIBarButtonItem *doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
     doneButtonItem.enabled = NO;
-	//self.navigationItem.rightBarButtonItem = doneButtonItem;
+		//self.navigationItem.rightBarButtonItem = doneButtonItem;
 		
     
     //testemail "Send Email" button
-    UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 360, 300, 40)];
+    //UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
+		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 360, 300, 40)];
     [shareButton setBackgroundImage:[UIImage imageNamed:@"nav-bar-background-normal@2x"]forState:UIControlStateNormal];
     [shareButton  addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
     [shareButton setTitle:@"Send Email" forState:UIControlStateNormal];
@@ -250,7 +258,9 @@
     [self.view addSubview:shareButton];
     
     
-    textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
+    //textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 150, 300, 40)];
+		textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
+
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.font = [UIFont systemFontOfSize:15];
     textField.placeholder = @"recipient's name";
@@ -262,14 +272,16 @@
     textField.delegate = self;
     [self.view addSubview:textField];
     
-    //self.recipientTextField.text = textField.text;
+		// self.recipientTextField.text = textField.text;
     NSLog(@"the text field says: %@", self.recipientTextField.text);
     
 }
 
 //resize image to send email
 -(UIImage*)resizeImage:(UIImage*)image{
-    CGSize newSize = CGSizeMake(100.0, 100.0);
+    //CGSize newSize = CGSizeMake(100.0, 100.0);
+		CGSize newSize = CGSizeMake(300.0, 300.0);
+		
     UIGraphicsBeginImageContext(newSize);
 		[image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
 		UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -277,40 +289,17 @@
     return newImage;
 }
 
--(void) viewDidDisappear:(BOOL)animated
-{
-    
-    
-    self.recipientTextField.text = textField.text;
-}
-
-//- (BOOL)textField:(UITextField *)textField
-//{
-//    [[NSNotificationCenter defaultCenter]
-//     addObserver:self
-//     selector:@selector(viewDidLoad:)
-//     name:UITextFieldTextDidChangeNotification
-//     object:textField];
-//    
-//    return self.recipientTextField.text = textField.text;
-//    
-//}
-
 //testemail
 - (void)sendEmail:(UIButton *)button {
-    
-    if (!textField.text) {
-       
-        
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"You must enter something in textfield"  delegate:self cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
-        
-        [alertView show];
-        
-         return;
-    }
-    
-    // put
-				
+		
+		if (textField.text.length == 0 ) {
+
+				UIAlertView *emptyTextAlert = [[UIAlertView alloc] initWithTitle:nil message:@"You must enter a recipient name" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+				[emptyTextAlert show];
+				return;
+
+		}
+		
 		// Set our email message body
 		NSMutableString *htmlMsg = [NSMutableString string];
 		[htmlMsg appendString:@"<html><body><p>"];
@@ -319,18 +308,18 @@
 		
 		
 		MFMailComposeViewController* controller =
-						[[MFMailComposeViewController alloc] init];
+		[[MFMailComposeViewController alloc] init];
 		controller.mailComposeDelegate = self;
 		controller.navigationBar.tintColor = [UIColor blackColor];
 		[controller setMessageBody:htmlMsg isHTML:NO];
 		//[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
-		[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
+			[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
     
 		
 		// Pull the image from ALAsset
 		int picCount = self.selectedAssets.count;
 		for (int i = 0; i < picCount; i++) {
-		
+				
 				ALAsset *asset = [self.selectedAssets objectAtIndex:i];
 				ALAssetRepresentation *rep = [asset defaultRepresentation];
 				Byte *buffer = (Byte*)malloc(rep.size);
@@ -343,7 +332,7 @@
 				UIImage *dataImage = [UIImage imageWithData:imageData];
 				dataImage = [self resizeImage:dataImage];
 				imageData = UIImageJPEGRepresentation(dataImage, 1);
-		
+				
 				NSString *fileType = [NSString stringWithFormat:@"file%i.jpeg", i];
 				[controller addAttachmentData:imageData mimeType:@"image/jpeg" fileName:fileType];
 		}
@@ -352,9 +341,9 @@
 		[controller setMessageBody:htmlMsg isHTML:YES];
 		
 		if (controller)
-		[self presentViewController:controller animated:YES
-				completion:^{}];
-
+				[self presentViewController:controller animated:YES
+												 completion:^{}];
+		
 }
 
 
@@ -363,15 +352,15 @@
                         error:(NSError*)error;
 {
 		[self dismissViewControllerAnimated:YES
-														completion:^{}];
+														 completion:^{}];
 		/*
-		UIAlertView *alert = [[UIAlertView alloc]
-													initWithTitle: nil message: @"Your complaint has been sent" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-		
-		if (result == MFMailComposeResultSent) {
-				[alert show];
-		}
-		*/
+		 UIAlertView *alert = [[UIAlertView alloc]
+		 initWithTitle: nil message: @"Your complaint has been sent" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		 
+		 if (result == MFMailComposeResultSent) {
+		 [alert show];
+		 }
+		 */
     
     
     if (result == MFMailComposeResultSaved || result == MFMailComposeResultSent) {
@@ -390,14 +379,12 @@
         // Add the current sent email info to this array then resave back into defaults.
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
+				
         NSArray *history = [defaults objectForKey:@"convoHisotry"];
         
         if (history == nil) {
             history = [NSArray array];
         }
-        
-        
         
         NSDictionary *currentEmail = @{@"recipeint": self.recipientTextField.text,
                                        @"numberOfPicsSent": @(self.selectedAssets.count),
@@ -465,13 +452,13 @@
         @autoreleasepool {
             [strongSelf.assetsGroup enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
                 
-                if (result == nil) 
+                if (result == nil)
                 {
                     return;
                 }
                 
                 AGIPCGridItem *gridItem = [[AGIPCGridItem alloc] initWithImagePickerController:strongSelf.imagePickerController asset:result andDelegate:strongSelf];
-                if ( strongSelf.imagePickerController.selection != nil && 
+                if ( strongSelf.imagePickerController.selection != nil &&
                     [strongSelf.imagePickerController.selection containsObject:result])
                 {
                     gridItem.selected = YES;
@@ -500,9 +487,9 @@
     
     NSInteger totalRows = [self.tableView numberOfRowsInSection:0];
     
-    //Prevents crash if totalRows = 0 (when the album is empty). 
+    //Prevents crash if totalRows = 0 (when the album is empty).
     if (totalRows > 0) {
-
+				
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:totalRows-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     }
 }
@@ -586,16 +573,16 @@
 
 - (void)registerForNotifications
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(didChangeLibrary:) 
-                                                 name:ALAssetsLibraryChangedNotification 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didChangeLibrary:)
+                                                 name:ALAssetsLibraryChangedNotification
                                                object:[AGImagePickerController defaultAssetsLibrary]];
 }
 
 - (void)unregisterFromNotifications
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self 
-                                                    name:ALAssetsLibraryChangedNotification 
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:ALAssetsLibraryChangedNotification
                                                   object:[AGImagePickerController defaultAssetsLibrary]];
 }
 
