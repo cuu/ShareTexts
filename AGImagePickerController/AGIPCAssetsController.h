@@ -22,7 +22,7 @@
 
 @interface AGIPCAssetsController : UITableViewController<UITableViewDataSource, UITableViewDelegate, AGIPCGridItemDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate>
 {
-    UITextField *recipientTextField;
+    UITextField *textField;
 }
 
 @property (strong) ALAssetsGroup *assetsGroup;

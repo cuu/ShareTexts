@@ -88,11 +88,7 @@
         {
             _assetsGroup = theAssetsGroup;
             [_assetsGroup setAssetsFilter:[ALAssetsFilter allPhotos]];
-<<<<<<< HEAD
 						
-=======
-            
->>>>>>> commit
             [self reloadData];
         }
     }
@@ -114,7 +110,6 @@
 {
     NSMutableArray *selectedAssets = [NSMutableArray array];
     
-<<<<<<< HEAD
 		for (AGIPCGridItem *gridItem in self.assets)
     {
 				if (gridItem.selected)
@@ -122,15 +117,6 @@
 						[selectedAssets addObject:gridItem.asset];
 				}
 		}
-=======
-    for (AGIPCGridItem *gridItem in self.assets)
-    {
-        if (gridItem.selected)
-        {
-            [selectedAssets addObject:gridItem.asset];
-        }
-    }
->>>>>>> commit
     
     return selectedAssets;
 }
@@ -178,11 +164,7 @@
     NSMutableArray *items = [NSMutableArray arrayWithCapacity:self.imagePickerController.numberOfItemsPerRow];
     
     NSUInteger startIndex = indexPath.row * self.imagePickerController.numberOfItemsPerRow,
-<<<<<<< HEAD
 		endIndex = startIndex + self.imagePickerController.numberOfItemsPerRow - 1;
-=======
-    endIndex = startIndex + self.imagePickerController.numberOfItemsPerRow - 1;
->>>>>>> commit
     if (startIndex < self.assets.count)
     {
         if (endIndex > self.assets.count - 1)
@@ -206,17 +188,10 @@
     {
         cell = [[AGIPCGridCell alloc] initWithImagePickerController:self.imagePickerController items:[self itemsForRowAtIndexPath:indexPath] andReuseIdentifier:CellIdentifier];
     }
-<<<<<<< HEAD
 		else
     {
 				cell.items = [self itemsForRowAtIndexPath:indexPath];
 		}
-=======
-    else
-    {
-        cell.items = [self itemsForRowAtIndexPath:indexPath];
-    }
->>>>>>> commit
     
     return cell;
 }
@@ -247,26 +222,15 @@
     [AGIPCGridItem performSelector:@selector(resetNumberOfSelections)];
     
     [super viewWillAppear:animated];
-    
-    self.recipientTextField.delegate = self;
 }
 
 
-- (void)viewDidDisappear:(BOOL)animated {
-    self.recipientTextField.text = recipientTextField.text;
-    NSLog(@"tes");
-}
-
-
-<<<<<<< HEAD
 - (void)viewDidDisappear:(BOOL)animated {
 		self.recipientTextField.text = textField.text;
 		NSLog(@"tes");
 }
 
 
-=======
->>>>>>> commit
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -281,21 +245,12 @@
     // Navigation Bar Items
     UIBarButtonItem *doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
     doneButtonItem.enabled = NO;
-<<<<<<< HEAD
 		//self.navigationItem.rightBarButtonItem = doneButtonItem;
 		
     
     //testemail "Send Email" button
-    //UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
-		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 360, 300, 40)];
-=======
-    //self.navigationItem.rightBarButtonItem = doneButtonItem;
-    
-    
-    //testemail "Send Email" button
-    //UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
-    UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 260, 300, 40)];
->>>>>>> commit
+    UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
+		//UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 360, 300, 40)];
     [shareButton setBackgroundImage:[UIImage imageNamed:@"nav-bar-background-normal@2x"]forState:UIControlStateNormal];
     [shareButton  addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
     [shareButton setTitle:@"Send Email" forState:UIControlStateNormal];
@@ -303,9 +258,8 @@
     [self.view addSubview:shareButton];
     
     
-    //textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 150, 300, 40)];
-<<<<<<< HEAD
-		textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
+    textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 150, 300, 40)];
+		//textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
 
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.font = [UIFont systemFontOfSize:15];
@@ -319,52 +273,24 @@
     [self.view addSubview:textField];
     
 		// self.recipientTextField.text = textField.text;
-=======
-    recipientTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 300, 300, 40)];
-    
-    recipientTextField.borderStyle = UITextBorderStyleRoundedRect;
-    recipientTextField.font = [UIFont systemFontOfSize:15];
-    recipientTextField.placeholder = @"recipient's name";
-    recipientTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    recipientTextField.keyboardType = UIKeyboardTypeDefault;
-    recipientTextField.returnKeyType = UIReturnKeyDone;
-    recipientTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    recipientTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    recipientTextField.delegate = self;
-    [self.view addSubview:recipientTextField];
-    
-    // self.recipientTextField.text = textField.text;
->>>>>>> commit
     NSLog(@"the text field says: %@", self.recipientTextField.text);
     
-}
-
--(BOOL) textFieldShouldReturn:(UITextField *)textField
-{
-    [recipientTextField resignFirstResponder];
-    return YES;
 }
 
 //resize image to send email
 -(UIImage*)resizeImage:(UIImage*)image{
     //CGSize newSize = CGSizeMake(100.0, 100.0);
-<<<<<<< HEAD
 		CGSize newSize = CGSizeMake(300.0, 300.0);
 		
-=======
-    CGSize newSize = CGSizeMake(300.0, 300.0);
-    
->>>>>>> commit
     UIGraphicsBeginImageContext(newSize);
-    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
-    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+		[image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+		UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
 }
 
 //testemail
 - (void)sendEmail:(UIButton *)button {
-<<<<<<< HEAD
 		
 		if (textField.text.length == 0 ) {
 
@@ -386,8 +312,8 @@
 		controller.mailComposeDelegate = self;
 		controller.navigationBar.tintColor = [UIColor blackColor];
 		[controller setMessageBody:htmlMsg isHTML:NO];
-		//[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
-			[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
+		[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
+		//	[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
     
 		
 		// Pull the image from ALAsset
@@ -418,61 +344,6 @@
 				[self presentViewController:controller animated:YES
 												 completion:^{}];
 		
-=======
-    
-    if (recipientTextField.text.length == 0 ) {
-        
-        UIAlertView *emptyTextAlert = [[UIAlertView alloc] initWithTitle:nil message:@"You must enter a recipient name" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [emptyTextAlert show];
-        return;
-        
-    }
-    
-    // Set our email message body
-    NSMutableString *htmlMsg = [NSMutableString string];
-    [htmlMsg appendString:@"<html><body><p>"];
-    [htmlMsg appendString:@"This is your message \n\n\n"];
-    //[htmlMsg appendString:@": %@</p></body></html>"];
-    
-    
-    MFMailComposeViewController* controller =
-    [[MFMailComposeViewController alloc] init];
-    controller.mailComposeDelegate = self;
-    controller.navigationBar.tintColor = [UIColor blackColor];
-    [controller setMessageBody:htmlMsg isHTML:NO];
-    //[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
-    [controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
-    
-    
-    // Pull the image from ALAsset
-    int picCount = self.selectedAssets.count;
-    for (int i = 0; i < picCount; i++) {
-        
-        ALAsset *asset = [self.selectedAssets objectAtIndex:i];
-        ALAssetRepresentation *rep = [asset defaultRepresentation];
-        Byte *buffer = (Byte*)malloc(rep.size);
-        NSUInteger buffered = [rep getBytes:buffer
-                                 fromOffset:0.0 length:rep.size error:nil];
-        NSData *imageData = [NSData dataWithBytesNoCopy:buffer
-                                                 length:buffered freeWhenDone:YES];
-        
-        //Image is too large for email, resize it with our custom method
-        UIImage *dataImage = [UIImage imageWithData:imageData];
-        dataImage = [self resizeImage:dataImage];
-        imageData = UIImageJPEGRepresentation(dataImage, 1);
-        
-        NSString *fileType = [NSString stringWithFormat:@"file%i.jpeg", i];
-        [controller addAttachmentData:imageData mimeType:@"image/jpeg" fileName:fileType];
-    }
-    
-    [controller setSubject:@"Subject"];
-    [controller setMessageBody:htmlMsg isHTML:YES];
-    
-    if (controller)
-        [self presentViewController:controller animated:YES
-                         completion:^{}];
-    
->>>>>>> commit
 }
 
 
@@ -480,7 +351,6 @@
           didFinishWithResult:(MFMailComposeResult)result
                         error:(NSError*)error;
 {
-<<<<<<< HEAD
 		[self dismissViewControllerAnimated:YES
 														 completion:^{}];
 		/*
@@ -491,18 +361,6 @@
 		 [alert show];
 		 }
 		 */
-=======
-    [self dismissViewControllerAnimated:YES
-                             completion:^{}];
-    /*
-     UIAlertView *alert = [[UIAlertView alloc]
-     initWithTitle: nil message: @"Your complaint has been sent" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-     
-     if (result == MFMailComposeResultSent) {
-     [alert show];
-     }
-     */
->>>>>>> commit
     
     
     if (result == MFMailComposeResultSaved || result == MFMailComposeResultSent) {
@@ -521,11 +379,7 @@
         // Add the current sent email info to this array then resave back into defaults.
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-<<<<<<< HEAD
 				
-=======
-        
->>>>>>> commit
         NSArray *history = [defaults objectForKey:@"convoHisotry"];
         
         if (history == nil) {
@@ -635,11 +489,7 @@
     
     //Prevents crash if totalRows = 0 (when the album is empty).
     if (totalRows > 0) {
-<<<<<<< HEAD
 				
-=======
-        
->>>>>>> commit
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:totalRows-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     }
 }
@@ -647,8 +497,8 @@
 - (void)doneAction:(id)sender
 {
     [self.imagePickerController performSelector:@selector(didFinishPickingAssets:) withObject:self.selectedAssets];
-    
-    
+		
+		
 }
 
 - (void)selectAllAction:(id)sender
