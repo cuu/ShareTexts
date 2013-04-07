@@ -249,8 +249,8 @@
 		
     
     //testemail "Send Email" button
-    UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
-		//UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 360, 300, 40)];
+    //UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
+		UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 360, 300, 40)];
     [shareButton setBackgroundImage:[UIImage imageNamed:@"nav-bar-background-normal@2x"]forState:UIControlStateNormal];
     [shareButton  addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
     [shareButton setTitle:@"Send Email" forState:UIControlStateNormal];
@@ -258,8 +258,8 @@
     [self.view addSubview:shareButton];
     
     
-    textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 150, 300, 40)];
-		//textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
+    //textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 150, 300, 40)];
+		textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 400, 300, 40)];
 
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.font = [UIFont systemFontOfSize:15];
@@ -312,8 +312,8 @@
 		controller.mailComposeDelegate = self;
 		controller.navigationBar.tintColor = [UIColor blackColor];
 		[controller setMessageBody:htmlMsg isHTML:NO];
-		[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
-		//	[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
+		//[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
+			[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
     
 		
 		// Pull the image from ALAsset
