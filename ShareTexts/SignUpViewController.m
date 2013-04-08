@@ -35,6 +35,18 @@
     self.emailSignUpTextField.delegate = self;
     self.passwordSignUpTextField.delegate = self;
     
+    
+
+//    [self.view addSubview: self.lastNameTextField];
+//    [self.view addSubview: self.firstNameTextField];
+//    [self.view addSubview: self.passwordSignUpTextField];
+//    [self.view addSubview: self.emailSignUpTextField];
+    
+[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"iPadBackgroundTexture-brown.png"]]];
+
+
+    
+    
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField
