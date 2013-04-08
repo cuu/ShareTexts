@@ -81,6 +81,14 @@
     
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.lastNameTextField resignFirstResponder];
+    [self.firstNameTextField resignFirstResponder];
+    [self.emailSignUpTextField resignFirstResponder];
+    [self.passwordSignUpTextField resignFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

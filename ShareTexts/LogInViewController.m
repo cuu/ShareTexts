@@ -31,6 +31,7 @@
     [super viewWillAppear:animated];
 }
 
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
@@ -88,6 +89,12 @@
     
     // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
     
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.usernameOrEmailTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
 }
 
 
