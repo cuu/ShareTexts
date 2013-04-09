@@ -24,6 +24,7 @@
 		F73C26CB170E1DCC005628EB /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26C5170E16BF005628EB /* iPhoneIcon_Big (1).png */; };
 		F73C26CE170E1DF0005628EB /* iPhoneIcon_Small (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */; };
 		F73C26CF170E1DF0005628EB /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */; };
+		F79420F217127C6000D2A34E /* iPadBackgroundTexture-brown.png in Resources */ = {isa = PBXBuildFile; fileRef = F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */; };
 		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
 		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
 		F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F71702603D009E5FCA /* Foundation.framework */; };
@@ -82,6 +83,7 @@
 		F73C26C9170E1DB0005628EB /* iPhoneIcon_Small (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Small (1).png"; sourceTree = "<group>"; };
 		F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Small (1).png"; sourceTree = "<group>"; };
 		F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Big (1).png"; sourceTree = "<group>"; };
+		F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadBackgroundTexture-brown.png"; path = "../../iPadBackgroundTexture-brown.png"; sourceTree = "<group>"; };
 		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
 		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C6FC1C170F3E0E00F53F51 /* facebookbutton.png */,
+				F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */,
 				F7C6FC18170F3BE600F53F51 /* googlebutton.png */,
 				F7C6FC16170F397200F53F51 /* doneButton@2x.png */,
 				F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */,
@@ -342,6 +345,7 @@
 				F7C6FC17170F397200F53F51 /* doneButton@2x.png in Resources */,
 				F7C6FC19170F3BE600F53F51 /* googlebutton.png in Resources */,
 				F7C6FC1D170F3E0E00F53F51 /* facebookbutton.png in Resources */,
+				F79420F217127C6000D2A34E /* iPadBackgroundTexture-brown.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

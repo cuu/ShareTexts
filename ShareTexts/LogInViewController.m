@@ -9,6 +9,8 @@
 #import "LogInViewController.h"
 #import "ShareTextsFirstViewController.h"
 #import "SignUpViewController.h"
+#import "testTableViewController.h"
+
 
 @interface LogInViewController ()
 
@@ -36,6 +38,9 @@
 {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillDisappear:animated];
+    NSLog(@"what is this value: %@", self.usernameOrEmailTextField.text);
+    NSLog(@"this is the other value: %@", self.ttvc.checkingEmailForLogIn);
+
 }
 
 - (void)viewDidLoad
@@ -153,6 +158,18 @@
         //[self shouldPerformSegueWithIdentifier:@"toShareTextsFirstView" sender:self];
     }
     
+    if ([self.usernameOrEmailTextField.text isEqualToString:self.ttvc.checkingEmailForLogIn]) {
+        UIAlertView *uialertView = [[UIAlertView alloc] initWithTitle:@"awesome" message:@"awesome" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+        [uialertView show];
+        return;
+    }
+    
+    if ([self.usernameOrEmailTextField.text isEqualToString:self.ttvc.checkingEmailForLogIn]) {
+        UIAlertView *uialertView = [[UIAlertView alloc] initWithTitle:@"awesome" message:@"awesome" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+        [uialertView show];
+        return;
+    
+}
 }
 
 
@@ -186,15 +203,18 @@
 //}
 
 
-
 - (IBAction)signUpButton:(id)sender
 {
-    
-   // [self perform];
-   // self.loginViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-
-    
-   //[self shouldPerformSegueWithIdentifier:@"toSignUpView" sender:sender];
+//    SignUpViewController *sivc = [[SignUpViewController alloc] init];
+//    
+//    // do any setup you need for myNewVC
+//    
+//    [self presentModalViewController:sivc animated:YES];
+//   // [self perform];
+//   // self.loginViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//
+//    
+//   //[self shouldPerformSegueWithIdentifier:@"toSignUpView" sender:sender];
 
 }
 - (IBAction)googleSignInButton:(id)sender
@@ -215,5 +235,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

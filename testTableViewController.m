@@ -31,6 +31,8 @@
     [super viewWillAppear:YES];
     [self setupDataModel];
     [self.tableView reloadData];
+    NSLog(@"what is this value: %@", self.checkingEmailForLogIn);
+
 }
 
 - (void)viewDidLoad
@@ -94,11 +96,15 @@
     }
     
     NSDictionary *userInfo = self.userDateBase[indexPath.row];
-
+    
     cell.lastNameLabel.text = userInfo[@"first name"];
     cell.firstNameLabel.text = userInfo[@"last name"];
     cell.emailLabel.text = userInfo[@"email"];
     cell.passwordLabel.text = userInfo[@"password"];
+    
+    self.checkingEmailForLogIn = userInfo[@"email"];
+    
+    NSLog(@"what is this value: %@", self.checkingEmailForLogIn);
     
     return cell;
 }

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "testTableViewController.h"
 
 @interface LogInViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameOrEmailTextField;
@@ -15,5 +16,7 @@
 
 @property (nonatomic, strong) UIViewController *loginViewController;
 @property (nonatomic, strong) UIViewController *signUpViewController;
+
+@property (nonatomic, strong) testTableViewController *ttvc;
 
 @end

@@ -61,22 +61,22 @@
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSArray *userDataBase = [defaults objectForKey:@"userDataBase"];
-    
-    if (userDataBase == nil) {
-        userDataBase = [NSArray array];
-    }
-    
-    NSDictionary *userInfo = @{@"last name": self.lastNameTextField.text,
-                               @"first name": self.firstNameTextField.text,
-                               @"email": self.emailSignUpTextField.text,
-                               @"password": self.passwordSignUpTextField.text};
-    
-    userDataBase = [userDataBase arrayByAddingObject:userInfo];
-    [defaults setObject:userDataBase forKey:@"userDataBase"];
-    [defaults synchronize];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    NSArray *userDataBase = [defaults objectForKey:@"userDataBase"];
+//    
+//    if (userDataBase == nil) {
+//        userDataBase = [NSArray array];
+//    }
+//    
+//    NSDictionary *userInfo = @{@"last name": self.lastNameTextField.text,
+//                               @"first name": self.firstNameTextField.text,
+//                               @"email": self.emailSignUpTextField.text,
+//                               @"password": self.passwordSignUpTextField.text};
+//    
+//    userDataBase = [userDataBase arrayByAddingObject:userInfo];
+//    [defaults setObject:userDataBase forKey:@"userDataBase"];
+//    [defaults synchronize];
     
     
 }
@@ -97,6 +97,24 @@
 
 - (IBAction)submitButton:(id)sender
 {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *userDataBase = [defaults objectForKey:@"userDataBase"];
+    
+    if (userDataBase == nil) {
+        userDataBase = [NSArray array];
+    }
+    
+    NSDictionary *userInfo = @{@"last name": self.lastNameTextField.text,
+                               @"first name": self.firstNameTextField.text,
+                               @"email": self.emailSignUpTextField.text,
+                               @"password": self.passwordSignUpTextField.text};
+    
+    userDataBase = [userDataBase arrayByAddingObject:userInfo];
+    [defaults setObject:userDataBase forKey:@"userDataBase"];
+    [defaults synchronize];
+    
     
 }
 
