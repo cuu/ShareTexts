@@ -155,10 +155,17 @@
         [emptyTextAlert show];
         return;
         
+        ShareTextsFirstViewController *stfvc = [[ShareTextsFirstViewController alloc] init];
+        
+        [self presentViewController: stfvc animated:YES completion:^{
+            
+        }];
+        
         //[self shouldPerformSegueWithIdentifier:@"toShareTextsFirstView" sender:self];
     }
     
-    if ([self.usernameOrEmailTextField.text isEqualToString:self.ttvc.checkingEmailForLogIn]) {
+    if ([self.usernameOrEmailTextField.text isEqualToString:self.ttvc.checkingEmailForLogIn])
+    {
         UIAlertView *uialertView = [[UIAlertView alloc] initWithTitle:@"awesome" message:@"awesome" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
         [uialertView show];
         return;
@@ -205,18 +212,12 @@
 
 - (IBAction)signUpButton:(id)sender
 {
-//    SignUpViewController *sivc = [[SignUpViewController alloc] init];
-//    
-//    // do any setup you need for myNewVC
-//    
-//    [self presentModalViewController:sivc animated:YES];
-//   // [self perform];
-//   // self.loginViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-//
-//    
-//   //[self shouldPerformSegueWithIdentifier:@"toSignUpView" sender:sender];
-
+    SignUpViewController *sivc = [[SignUpViewController alloc] init];
+    [self presentViewController: sivc animated:YES completion:^{
+    }];
+    
 }
+
 - (IBAction)googleSignInButton:(id)sender
 {
     
