@@ -10,6 +10,7 @@
 #import "ShareTextsFirstViewController.h"
 #import "SignUpViewController.h"
 #import "testTableViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface LogInViewController ()
@@ -31,6 +32,17 @@
 {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
+    
+    
+    UIButton *loginButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 160, 300, 400)];
+    loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    loginButton.backgroundColor = [UIColor redColor];
+    loginButton.layer.borderColor = [UIColor redColor].CGColor;
+    loginButton.layer.borderWidth = 0.5f;
+    loginButton.layer.cornerRadius = 10.0f;
+    
+    
 }
 
 
@@ -48,7 +60,21 @@
     // committing 
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"iPadBackgroundTexture-brown.png"]]];
+//    UIColor *coolGreen = [UIColor colorWithRed:0.257 green:0.597 blue:0.018 alpha:1.000];
+//    
+//    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    loginButton.backgroundColor = coolGreen;
+//    loginButton.layer.borderColor = [UIColor blackColor].CGColor;
+//    loginButton.layer.borderWidth = 0.5f;
+//    loginButton.layer.cornerRadius = 10.0f;
+//    [loginButton setTitle:@"Sign In" forState:UIControlStateNormal];
+//    loginButton.frame = CGRectMake(80, 210, 160, 40);
+//    [self.view addSubview:loginButton];
+    
+    
+    // I decided to take this shitty looking background out for now
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"iPadBackgroundTexture-brown.png"]]];
     
     self.originalCenter  = self.view.center;
     self.view.center = CGPointMake(self.originalCenter.x, 120);
@@ -164,19 +190,19 @@
         //[self shouldPerformSegueWithIdentifier:@"toShareTextsFirstView" sender:self];
     }
     
-    if ([self.usernameOrEmailTextField.text isEqualToString:self.ttvc.checkingEmailForLogIn])
-    {
-        UIAlertView *uialertView = [[UIAlertView alloc] initWithTitle:@"awesome" message:@"awesome" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
-        [uialertView show];
-        return;
-    }
-    
-    if ([self.usernameOrEmailTextField.text isEqualToString:self.ttvc.checkingEmailForLogIn]) {
-        UIAlertView *uialertView = [[UIAlertView alloc] initWithTitle:@"awesome" message:@"awesome" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
-        [uialertView show];
-        return;
-    
-}
+//    if ([self.usernameOrEmailTextField.text isEqualToString:self.ttvc.checkingEmailForLogIn])
+//    {
+//        UIAlertView *uialertView = [[UIAlertView alloc] initWithTitle:@"awesome" message:@"awesome" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+//        [uialertView show];
+//        return;
+//    }
+//    
+//    if ([self.usernameOrEmailTextField.text isEqualToString:self.ttvc.checkingEmailForLogIn]) {
+//        UIAlertView *uialertView = [[UIAlertView alloc] initWithTitle:@"awesome" message:@"awesome" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+//        [uialertView show];
+//        return;
+//    
+//}
 }
 
 

@@ -24,6 +24,9 @@
 		F73C26CB170E1DCC005628EB /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26C5170E16BF005628EB /* iPhoneIcon_Big (1).png */; };
 		F73C26CE170E1DF0005628EB /* iPhoneIcon_Small (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */; };
 		F73C26CF170E1DF0005628EB /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */; };
+		F785AE2B1715F9BC00A0C5DE /* LogInTextFieldsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */; };
+		F785AE5C1716763500A0C5DE /* SignIn.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE5B1716763500A0C5DE /* SignIn.png */; };
+		F785AE5E1716782E00A0C5DE /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE5D1716782E00A0C5DE /* line.png */; };
 		F79420F217127C6000D2A34E /* iPadBackgroundTexture-brown.png in Resources */ = {isa = PBXBuildFile; fileRef = F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */; };
 		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
 		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
@@ -83,6 +86,10 @@
 		F73C26C9170E1DB0005628EB /* iPhoneIcon_Small (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Small (1).png"; sourceTree = "<group>"; };
 		F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Small (1).png"; sourceTree = "<group>"; };
 		F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Big (1).png"; sourceTree = "<group>"; };
+		F785AE291715F9BC00A0C5DE /* LogInTextFieldsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInTextFieldsTableView.h; sourceTree = "<group>"; };
+		F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInTextFieldsTableView.m; sourceTree = "<group>"; };
+		F785AE5B1716763500A0C5DE /* SignIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignIn.png; path = ../../SignIn.png; sourceTree = "<group>"; };
+		F785AE5D1716782E00A0C5DE /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = ../../line.png; sourceTree = "<group>"; };
 		F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadBackgroundTexture-brown.png"; path = "../../iPadBackgroundTexture-brown.png"; sourceTree = "<group>"; };
 		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
 		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
@@ -140,6 +147,8 @@
 		6007A0121707B9E700B3891B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F785AE291715F9BC00A0C5DE /* LogInTextFieldsTableView.h */,
+				F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */,
 				F701F11F170E7C0E000D6EE8 /* LogInViewController.h */,
 				F701F120170E7C0E000D6EE8 /* LogInViewController.m */,
 				F7C6FC1E170F3F6B00F53F51 /* SignUpViewController.h */,
@@ -251,7 +260,9 @@
 		F7A936FC1702603D009E5FCA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F785AE5D1716782E00A0C5DE /* line.png */,
 				F7C6FC1C170F3E0E00F53F51 /* facebookbutton.png */,
+				F785AE5B1716763500A0C5DE /* SignIn.png */,
 				F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */,
 				F7C6FC18170F3BE600F53F51 /* googlebutton.png */,
 				F7C6FC16170F397200F53F51 /* doneButton@2x.png */,
@@ -346,6 +357,8 @@
 				F7C6FC19170F3BE600F53F51 /* googlebutton.png in Resources */,
 				F7C6FC1D170F3E0E00F53F51 /* facebookbutton.png in Resources */,
 				F79420F217127C6000D2A34E /* iPadBackgroundTexture-brown.png in Resources */,
+				F785AE5C1716763500A0C5DE /* SignIn.png in Resources */,
+				F785AE5E1716782E00A0C5DE /* line.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +386,7 @@
 				F7C6FC20170F3F6B00F53F51 /* SignUpViewController.m in Sources */,
 				F7C6FC231710A53500F53F51 /* TestTableCell.m in Sources */,
 				605EC6851710F19800DD4D82 /* AGIPCAssetsController.m in Sources */,
+				F785AE2B1715F9BC00A0C5DE /* LogInTextFieldsTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
