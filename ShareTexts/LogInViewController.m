@@ -146,13 +146,13 @@
         [emptyTextAlert show];
         return;
         
-//        ShareTextsFirstViewController *stfvc = [[ShareTextsFirstViewController alloc] init];
-//        
-//        [self presentViewController: stfvc animated:YES completion:^{
-//            
-//        }];
-    } else {
-        [self performSegueWithIdentifier:@"toShareTexts" sender:self];
+        ShareTextsFirstViewController *stfvc = [[ShareTextsFirstViewController alloc] init];
+        
+        [self presentViewController: stfvc animated:YES completion:^{
+            
+        }];
+//    } else {
+//        [self performSegueWithIdentifier:@"toShareTexts" sender:self];
         
         
             }

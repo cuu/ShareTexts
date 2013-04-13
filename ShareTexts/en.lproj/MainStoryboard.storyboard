@@ -516,7 +516,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInButton:" destination="UDV-OG-whT" eventType="touchUpInside" id="sfz-qQ-DP4"/>
-                                    <segue destination="2" kind="push" identifier="toShareTexts" id="4Wd-kj-cTf"/>
+                                    <segue destination="2" kind="modal" id="9au-iL-adP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67y-Ku-h6O">
@@ -826,6 +826,76 @@
         <image name="line.png" width="595" height="42"/>
         <image name="speech bubble .png" width="280" height="245"/>
     </resources>
+    <classes>
+        <class className="AddTextsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTextsTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+            </relationships>
+        </class>
+        <class className="LogInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="facebookSignInButton:"/>
+                <relationship kind="action" name="googleSignInButton:"/>
+                <relationship kind="action" name="logInButton:"/>
+                <relationship kind="action" name="signUpButton:"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameOrEmailTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ShareTextsCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShareTextsCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateSentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberOfPicsSentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recipientSentLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ShareTextsFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShareTextsFirstViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SignUpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignUpViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="outlet" name="emailSignUpTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordSignUpTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="TestTableCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestTableCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="genderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lastNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WelcomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="signInWelcomeButton:"/>
+                <relationship kind="action" name="signUpWelcomeButton:"/>
+            </relationships>
+        </class>
+        <class className="testTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/testTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
