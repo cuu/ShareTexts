@@ -258,7 +258,7 @@
     [shareButton  addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
     [shareButton setTitle:@"Send Email" forState:UIControlStateNormal];
     [shareButton setBackgroundColor:[UIColor blueColor]];
-    [self.view addSubview:shareButton];
+   // [self.view addSubview:shareButton];
     
     
     //textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 150, 300, 40)];
@@ -273,7 +273,7 @@
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     textField.delegate = self;
-    [self.view addSubview:textField];
+   // [self.view addSubview:textField];
     
 		// self.recipientTextField.text = textField.text;
     NSLog(@"the text field says: %@", self.recipientTextField.text);
@@ -294,9 +294,6 @@
 
 -(void) slidePopup
 {
-		
-		
-		
 		CGRect frame=CGRectMake(0, CGRectGetMaxY(self.view.bounds), 320, 480);
 		
     backToOriginal=frame;
