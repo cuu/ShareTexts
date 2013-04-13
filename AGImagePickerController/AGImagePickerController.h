@@ -11,7 +11,6 @@
 
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-
 #import "AGImagePickerControllerDefines.h"
 
 @class AGImagePickerController;

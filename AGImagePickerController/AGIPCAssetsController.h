@@ -20,9 +20,12 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 
-@interface AGIPCAssetsController : UITableViewController<UITableViewDataSource, UITableViewDelegate, AGIPCGridItemDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate>
+@interface AGIPCAssetsController : UITableViewController<UITableViewDataSource, UITableViewDelegate, AGIPCGridItemDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate>
 {
     UITextField *textField;
+		
+		UITextField *modalTextField;
+
 }
 
 @property (strong) ALAssetsGroup *assetsGroup;

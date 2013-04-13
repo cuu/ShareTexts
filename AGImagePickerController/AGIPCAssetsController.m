@@ -21,6 +21,9 @@
     ALAssetsGroup *_assetsGroup;
     NSMutableArray *_assets;
     AGImagePickerController *_imagePickerController;
+		
+		CGRect backToOriginal;
+		UIView *popup;
 }
 
 @property (nonatomic, strong) NSMutableArray *assets;
@@ -274,8 +277,108 @@
     
 		// self.recipientTextField.text = textField.text;
     NSLog(@"the text field says: %@", self.recipientTextField.text);
+		
+		
+	//	[self CreateSlideOut];
+   // [self slidePopup];
+    [super viewDidLoad];
     
 }
+
+-(void) CreateSlideOut
+{
+		
+  		
+		
+}
+
+-(void) slidePopup
+{
+		
+		
+		
+		CGRect frame=CGRectMake(0, CGRectGetMaxY(self.view.bounds), 320, 480);
+		
+    backToOriginal=frame;
+		
+    popup=[[UIView alloc]initWithFrame:frame];
+		
+    popup.backgroundColor = [UIColor grayColor];
+		
+		// [self.view addSubview:popup];
+		
+		UIWindow *appWindow = [UIApplication sharedApplication].keyWindow;
+		[appWindow insertSubview:popup aboveSubview:self.view];
+
+		
+		UIButton *sendButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    sendButton.frame=CGRectMake(60, 190, 200,40);
+    sendButton.backgroundColor=[UIColor clearColor];
+		
+    [sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		
+    [sendButton setTitle:@"Send Email" forState:UIControlStateNormal];
+    [sendButton addTarget:self action:@selector(sendEmail:) forControlEvents:UIControlEventTouchUpInside];
+		
+		
+		
+    UIButton *button=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame=CGRectMake(60, 250, 200,40);
+    button.backgroundColor=[UIColor clearColor];
+		
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		
+    [button setTitle:@"Cancel" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(DismissClicked:) forControlEvents:UIControlEventTouchUpInside];
+		
+    modalTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 28, 280, 150)];
+    modalTextField.delegate=self;
+    modalTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    [modalTextField setBackgroundColor:[UIColor clearColor]];
+    [modalTextField setBorderStyle:UITextBorderStyleRoundedRect];
+		[modalTextField setAlpha:1.0];
+		[popup setAlpha:.9];
+    [popup addSubview:modalTextField];
+    [popup addSubview:button];
+		[popup addSubview:sendButton];
+		
+    frame=CGRectMake(0, self.view.bounds.size.height /2 - 50, self.view.bounds.size.width, self.view.bounds.size.height/2 + 50);
+		
+    [UIView beginAnimations:nil context:nil];
+		[UIView setAnimationDuration:.2];
+    [popup setFrame:frame];
+		
+    [UIView commitAnimations];
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSLog(@"in textFieldShouldReturn");
+    [modalTextField resignFirstResponder];
+    return YES;
+}
+-(void) removePopUp
+
+{
+    [UIView beginAnimations:nil context:nil];
+		
+		[UIView setAnimationDuration:.2];
+
+    [popup setFrame:backToOriginal];
+		
+    [UIView commitAnimations];
+		
+    [modalTextField resignFirstResponder];
+}
+
+-(IBAction) DismissClicked : (id) sender
+{
+		
+    [self removePopUp];
+}
+
+
+
 
 //resize image to send email
 -(UIImage*)resizeImage:(UIImage*)image{
@@ -292,13 +395,15 @@
 //testemail
 - (void)sendEmail:(UIButton *)button {
 		
-		if (textField.text.length == 0 ) {
+		if (modalTextField.text.length == 0 ) {
 
 				UIAlertView *emptyTextAlert = [[UIAlertView alloc] initWithTitle:nil message:@"You must enter a recipient name" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
 				[emptyTextAlert show];
 				return;
 
 		}
+		
+		[self removePopUp];
 		
 		// Set our email message body
 		NSMutableString *htmlMsg = [NSMutableString string];
@@ -428,15 +533,23 @@
         
         self.toolbarItems = items;
     } else {
-        // Standard Toolbar Items
+        // Standard Toolbar Items 
         UIBarButtonItem *selectAll = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringWithDefaultValue(@"AGIPC.SelectAll", nil, [NSBundle mainBundle], @"Select All", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(selectAllAction:)];
         UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         UIBarButtonItem *deselectAll = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringWithDefaultValue(@"AGIPC.DeselectAll", nil, [NSBundle mainBundle], @"Deselect All", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(deselectAllAction:)];
+				
+				//testtoolbar
+				 UIBarButtonItem *sendEmail= [[UIBarButtonItem alloc] initWithTitle:@"Send Email" style:UIBarButtonItemStyleBordered target:self action:@selector(sendEmailAction:)];
+				
         
-        NSArray *toolbarItemsForManagingTheSelection = @[selectAll, flexibleSpace, deselectAll];
+        NSArray *toolbarItemsForManagingTheSelection = @[selectAll, flexibleSpace,sendEmail,flexibleSpace, deselectAll];
         self.toolbarItems = toolbarItemsForManagingTheSelection;
         
     }
+}
+
+-(void)sendEmailAction: (id)sender {
+		[self slidePopup];
 }
 
 - (void)loadAssets
