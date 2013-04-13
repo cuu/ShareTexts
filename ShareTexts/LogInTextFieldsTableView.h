@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogInTextFieldsTableView : UITableView <UITableViewDataSource, UITableViewDelegate> 
+@interface LogInTextFieldsTableView : UITableView <UITableViewDataSource, UITableViewDelegate>
+
 
 @end

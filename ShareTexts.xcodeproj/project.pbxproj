@@ -25,9 +25,27 @@
 		F73C26CE170E1DF0005628EB /* iPhoneIcon_Small (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */; };
 		F73C26CF170E1DF0005628EB /* iPhoneIcon_Big (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */; };
 		F785AE2B1715F9BC00A0C5DE /* LogInTextFieldsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */; };
-		F785AE5C1716763500A0C5DE /* SignIn.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE5B1716763500A0C5DE /* SignIn.png */; };
-		F785AE5E1716782E00A0C5DE /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE5D1716782E00A0C5DE /* line.png */; };
-		F79420F217127C6000D2A34E /* iPadBackgroundTexture-brown.png in Resources */ = {isa = PBXBuildFile; fileRef = F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */; };
+		F785AE6317175D3800A0C5DE /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F785AE6217175D3800A0C5DE /* WelcomeViewController.m */; };
+		F785AE6C171760D400A0C5DE /* tableViewCellBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE64171760CF00A0C5DE /* tableViewCellBottom.png */; };
+		F785AE6D171760D400A0C5DE /* tableViewCellBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE65171760CF00A0C5DE /* tableViewCellBottom@2x.png */; };
+		F785AE6E171760D400A0C5DE /* tableViewCellMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE66171760D000A0C5DE /* tableViewCellMiddle.png */; };
+		F785AE6F171760D400A0C5DE /* tableViewCellMiddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE67171760D100A0C5DE /* tableViewCellMiddle@2x.png */; };
+		F785AE70171760D400A0C5DE /* tableViewCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE68171760D100A0C5DE /* tableViewCellTop.png */; };
+		F785AE71171760D400A0C5DE /* tableViewCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE69171760D200A0C5DE /* tableViewCellTop@2x.png */; };
+		F785AE72171760D400A0C5DE /* tableViewSingleCell.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE6A171760D300A0C5DE /* tableViewSingleCell.png */; };
+		F785AE73171760D400A0C5DE /* tableViewSingleCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE6B171760D400A0C5DE /* tableViewSingleCell@2x.png */; };
+		F785AE7517178FDB00A0C5DE /* brown bar.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE7417178FDB00A0C5DE /* brown bar.png */; };
+		F785AE771717923B00A0C5DE /* facebook f.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE761717923B00A0C5DE /* facebook f.png */; };
+		F785AE79171792F100A0C5DE /* G_of_google.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE78171792F100A0C5DE /* G_of_google.png */; };
+		F785AE7C1718E9CD00A0C5DE /* launchImageSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE7A1718E9CA00A0C5DE /* launchImageSmall.png */; };
+		F785AE7D1718E9CD00A0C5DE /* launchImageBig.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE7B1718E9CB00A0C5DE /* launchImageBig.png */; };
+		F785AE7F1718F72000A0C5DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE7E1718F71F00A0C5DE /* Default-568h@2x.png */; };
+		F785AE811718F72D00A0C5DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE801718F72D00A0C5DE /* Default@2x.png */; };
+		F785AE831718F73300A0C5DE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE821718F73200A0C5DE /* Default.png */; };
+		F785AE89171919E900A0C5DE /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE88171919E600A0C5DE /* line.png */; };
+		F785AE8B17191A0A00A0C5DE /* speech bubble .png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE8A17191A0800A0C5DE /* speech bubble .png */; };
+		F785AE8E17191A2500A0C5DE /* SignIn.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE8C17191A2200A0C5DE /* SignIn.png */; };
+		F785AE8F17191A2500A0C5DE /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE8D17191A2300A0C5DE /* SignUp.png */; };
 		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
 		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
 		F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F71702603D009E5FCA /* Foundation.framework */; };
@@ -88,9 +106,28 @@
 		F73C26CD170E1DF0005628EB /* iPhoneIcon_Big (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon_Big (1).png"; sourceTree = "<group>"; };
 		F785AE291715F9BC00A0C5DE /* LogInTextFieldsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInTextFieldsTableView.h; sourceTree = "<group>"; };
 		F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInTextFieldsTableView.m; sourceTree = "<group>"; };
-		F785AE5B1716763500A0C5DE /* SignIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignIn.png; path = ../../SignIn.png; sourceTree = "<group>"; };
-		F785AE5D1716782E00A0C5DE /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = ../../line.png; sourceTree = "<group>"; };
-		F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadBackgroundTexture-brown.png"; path = "../../iPadBackgroundTexture-brown.png"; sourceTree = "<group>"; };
+		F785AE6117175D3800A0C5DE /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		F785AE6217175D3800A0C5DE /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		F785AE64171760CF00A0C5DE /* tableViewCellBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewCellBottom.png; sourceTree = "<group>"; };
+		F785AE65171760CF00A0C5DE /* tableViewCellBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewCellBottom@2x.png"; sourceTree = "<group>"; };
+		F785AE66171760D000A0C5DE /* tableViewCellMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewCellMiddle.png; sourceTree = "<group>"; };
+		F785AE67171760D100A0C5DE /* tableViewCellMiddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewCellMiddle@2x.png"; sourceTree = "<group>"; };
+		F785AE68171760D100A0C5DE /* tableViewCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewCellTop.png; sourceTree = "<group>"; };
+		F785AE69171760D200A0C5DE /* tableViewCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewCellTop@2x.png"; sourceTree = "<group>"; };
+		F785AE6A171760D300A0C5DE /* tableViewSingleCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewSingleCell.png; sourceTree = "<group>"; };
+		F785AE6B171760D400A0C5DE /* tableViewSingleCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewSingleCell@2x.png"; sourceTree = "<group>"; };
+		F785AE7417178FDB00A0C5DE /* brown bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brown bar.png"; sourceTree = "<group>"; };
+		F785AE761717923B00A0C5DE /* facebook f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook f.png"; sourceTree = "<group>"; };
+		F785AE78171792F100A0C5DE /* G_of_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = G_of_google.png; sourceTree = "<group>"; };
+		F785AE7A1718E9CA00A0C5DE /* launchImageSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchImageSmall.png; path = ../launchImageSmall.png; sourceTree = "<group>"; };
+		F785AE7B1718E9CB00A0C5DE /* launchImageBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchImageBig.png; path = ../launchImageBig.png; sourceTree = "<group>"; };
+		F785AE7E1718F71F00A0C5DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F785AE801718F72D00A0C5DE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F785AE821718F73200A0C5DE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F785AE88171919E600A0C5DE /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		F785AE8A17191A0800A0C5DE /* speech bubble .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech bubble .png"; sourceTree = "<group>"; };
+		F785AE8C17191A2200A0C5DE /* SignIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignIn.png; sourceTree = "<group>"; };
+		F785AE8D17191A2300A0C5DE /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
 		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
 		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,22 +184,24 @@
 		6007A0121707B9E700B3891B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F785AE291715F9BC00A0C5DE /* LogInTextFieldsTableView.h */,
-				F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */,
+				F785AE6117175D3800A0C5DE /* WelcomeViewController.h */,
+				F785AE6217175D3800A0C5DE /* WelcomeViewController.m */,
 				F701F11F170E7C0E000D6EE8 /* LogInViewController.h */,
 				F701F120170E7C0E000D6EE8 /* LogInViewController.m */,
 				F7C6FC1E170F3F6B00F53F51 /* SignUpViewController.h */,
 				F7C6FC1F170F3F6B00F53F51 /* SignUpViewController.m */,
+				F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */,
+				F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */,
 				F7BEDE68170C880F000F1108 /* testTableViewController.h */,
 				F7BEDE69170C880F000F1108 /* testTableViewController.m */,
+				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
+				F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */,
+				F785AE291715F9BC00A0C5DE /* LogInTextFieldsTableView.h */,
+				F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */,
 				F72E188D170BE05600CF4962 /* ShareTextsCell.h */,
 				F72E188E170BE05600CF4962 /* ShareTextsCell.m */,
 				F7C6FC211710A53500F53F51 /* TestTableCell.h */,
 				F7C6FC221710A53500F53F51 /* TestTableCell.m */,
-				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
-				F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */,
-				F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */,
-				F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +253,9 @@
 		F7A936E91702603D009E5FCA = {
 			isa = PBXGroup;
 			children = (
+				F785AE821718F73200A0C5DE /* Default.png */,
+				F785AE801718F72D00A0C5DE /* Default@2x.png */,
+				F785AE7E1718F71F00A0C5DE /* Default-568h@2x.png */,
 				F73C26C9170E1DB0005628EB /* iPhoneIcon_Small (1).png */,
 				F73C26C7170E16F3005628EB /* iPhoneIcon_small.png */,
 				F73C26C5170E16BF005628EB /* iPhoneIcon_Big (1).png */,
@@ -260,10 +302,24 @@
 		F7A936FC1702603D009E5FCA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F785AE5D1716782E00A0C5DE /* line.png */,
+				F785AE7A1718E9CA00A0C5DE /* launchImageSmall.png */,
+				F785AE7B1718E9CB00A0C5DE /* launchImageBig.png */,
+				F785AE78171792F100A0C5DE /* G_of_google.png */,
+				F785AE761717923B00A0C5DE /* facebook f.png */,
+				F785AE7417178FDB00A0C5DE /* brown bar.png */,
+				F785AE64171760CF00A0C5DE /* tableViewCellBottom.png */,
+				F785AE65171760CF00A0C5DE /* tableViewCellBottom@2x.png */,
+				F785AE66171760D000A0C5DE /* tableViewCellMiddle.png */,
+				F785AE67171760D100A0C5DE /* tableViewCellMiddle@2x.png */,
+				F785AE8C17191A2200A0C5DE /* SignIn.png */,
+				F785AE8D17191A2300A0C5DE /* SignUp.png */,
+				F785AE68171760D100A0C5DE /* tableViewCellTop.png */,
+				F785AE69171760D200A0C5DE /* tableViewCellTop@2x.png */,
+				F785AE6A171760D300A0C5DE /* tableViewSingleCell.png */,
+				F785AE8A17191A0800A0C5DE /* speech bubble .png */,
+				F785AE6B171760D400A0C5DE /* tableViewSingleCell@2x.png */,
+				F785AE88171919E600A0C5DE /* line.png */,
 				F7C6FC1C170F3E0E00F53F51 /* facebookbutton.png */,
-				F785AE5B1716763500A0C5DE /* SignIn.png */,
-				F79420F117127C6000D2A34E /* iPadBackgroundTexture-brown.png */,
 				F7C6FC18170F3BE600F53F51 /* googlebutton.png */,
 				F7C6FC16170F397200F53F51 /* doneButton@2x.png */,
 				F73C26CC170E1DF0005628EB /* iPhoneIcon_Small (1).png */,
@@ -356,9 +412,26 @@
 				F7C6FC17170F397200F53F51 /* doneButton@2x.png in Resources */,
 				F7C6FC19170F3BE600F53F51 /* googlebutton.png in Resources */,
 				F7C6FC1D170F3E0E00F53F51 /* facebookbutton.png in Resources */,
-				F79420F217127C6000D2A34E /* iPadBackgroundTexture-brown.png in Resources */,
-				F785AE5C1716763500A0C5DE /* SignIn.png in Resources */,
-				F785AE5E1716782E00A0C5DE /* line.png in Resources */,
+				F785AE6C171760D400A0C5DE /* tableViewCellBottom.png in Resources */,
+				F785AE6D171760D400A0C5DE /* tableViewCellBottom@2x.png in Resources */,
+				F785AE6E171760D400A0C5DE /* tableViewCellMiddle.png in Resources */,
+				F785AE6F171760D400A0C5DE /* tableViewCellMiddle@2x.png in Resources */,
+				F785AE70171760D400A0C5DE /* tableViewCellTop.png in Resources */,
+				F785AE71171760D400A0C5DE /* tableViewCellTop@2x.png in Resources */,
+				F785AE72171760D400A0C5DE /* tableViewSingleCell.png in Resources */,
+				F785AE73171760D400A0C5DE /* tableViewSingleCell@2x.png in Resources */,
+				F785AE7517178FDB00A0C5DE /* brown bar.png in Resources */,
+				F785AE771717923B00A0C5DE /* facebook f.png in Resources */,
+				F785AE79171792F100A0C5DE /* G_of_google.png in Resources */,
+				F785AE7C1718E9CD00A0C5DE /* launchImageSmall.png in Resources */,
+				F785AE7D1718E9CD00A0C5DE /* launchImageBig.png in Resources */,
+				F785AE7F1718F72000A0C5DE /* Default-568h@2x.png in Resources */,
+				F785AE811718F72D00A0C5DE /* Default@2x.png in Resources */,
+				F785AE831718F73300A0C5DE /* Default.png in Resources */,
+				F785AE89171919E900A0C5DE /* line.png in Resources */,
+				F785AE8B17191A0A00A0C5DE /* speech bubble .png in Resources */,
+				F785AE8E17191A2500A0C5DE /* SignIn.png in Resources */,
+				F785AE8F17191A2500A0C5DE /* SignUp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +460,7 @@
 				F7C6FC231710A53500F53F51 /* TestTableCell.m in Sources */,
 				605EC6851710F19800DD4D82 /* AGIPCAssetsController.m in Sources */,
 				F785AE2B1715F9BC00A0C5DE /* LogInTextFieldsTableView.m in Sources */,
+				F785AE6317175D3800A0C5DE /* WelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

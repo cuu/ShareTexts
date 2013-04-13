@@ -23,76 +23,56 @@
     return self;
 }
 
+#pragma mark view lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    
+        
     self.lastNameTextField.delegate = self;
     self.firstNameTextField.delegate = self;
     self.emailSignUpTextField.delegate = self;
     self.passwordSignUpTextField.delegate = self;
-    
-    
-
-//    [self.view addSubview: self.lastNameTextField];
-//    [self.view addSubview: self.firstNameTextField];
-//    [self.view addSubview: self.passwordSignUpTextField];
-//    [self.view addSubview: self.emailSignUpTextField];
-    
-[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"iPadBackgroundTexture-brown.png"]]];
-
-
-    
-    
 }
 
-- (BOOL) textFieldShouldReturn:(UITextField *)textField
+- (void)viewDidAppear:(BOOL)animated
 {
-    [self.lastNameTextField resignFirstResponder];
-    [self.firstNameTextField resignFirstResponder];
-    [self.emailSignUpTextField resignFirstResponder];
-    [self.passwordSignUpTextField resignFirstResponder];
-    return YES;
+    NSLog(@"did this view appear?");
 }
-
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    NSArray *userDataBase = [defaults objectForKey:@"userDataBase"];
-//    
-//    if (userDataBase == nil) {
-//        userDataBase = [NSArray array];
-//    }
-//    
-//    NSDictionary *userInfo = @{@"last name": self.lastNameTextField.text,
-//                               @"first name": self.firstNameTextField.text,
-//                               @"email": self.emailSignUpTextField.text,
-//                               @"password": self.passwordSignUpTextField.text};
-//    
-//    userDataBase = [userDataBase arrayByAddingObject:userInfo];
-//    [defaults setObject:userDataBase forKey:@"userDataBase"];
-//    [defaults synchronize];
-    
-    
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.lastNameTextField resignFirstResponder];
-    [self.firstNameTextField resignFirstResponder];
-    [self.emailSignUpTextField resignFirstResponder];
-    [self.passwordSignUpTextField resignFirstResponder];
+    //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //
+    //    NSArray *userDataBase = [defaults objectForKey:@"userDataBase"];
+    //
+    //    if (userDataBase == nil) {
+    //        userDataBase = [NSArray array];
+    //    }
+    //
+    //    NSDictionary *userInfo = @{@"last name": self.lastNameTextField.text,
+    //                               @"first name": self.firstNameTextField.text,
+    //                               @"email": self.emailSignUpTextField.text,
+    //                               @"password": self.passwordSignUpTextField.text};
+    //
+    //    userDataBase = [userDataBase arrayByAddingObject:userInfo];
+    //    [defaults setObject:userDataBase forKey:@"userDataBase"];
+    //    [defaults synchronize];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark buttons
+
+- (IBAction)cancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (IBAction)submitButton:(id)sender
@@ -116,6 +96,25 @@
     [defaults synchronize];
     
     
+}
+
+#pragma mark notifications
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [self.lastNameTextField resignFirstResponder];
+    [self.firstNameTextField resignFirstResponder];
+    [self.emailSignUpTextField resignFirstResponder];
+    [self.passwordSignUpTextField resignFirstResponder];
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.lastNameTextField resignFirstResponder];
+    [self.firstNameTextField resignFirstResponder];
+    [self.emailSignUpTextField resignFirstResponder];
+    [self.passwordSignUpTextField resignFirstResponder];
 }
 
 

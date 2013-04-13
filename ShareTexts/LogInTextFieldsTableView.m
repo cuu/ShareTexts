@@ -49,6 +49,39 @@
     return cell;
 
 }
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//	if (section == 0) {
+//		return 0;
+//	} else if (section == 1) {
+//		return 44;
+//	}
+//	return [super tableView:tableView heightForFooterInSection:section];
+//}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    int numberOfRows = [self.tableView numberOfRowsInSection:indexPath.section];
+//    NSString *backgroundImageName = nil;
+//    NSString *selectedBackgroundImageName = nil;
+//    
+//    if (numberOfRows == 1) {
+//        backgroundImageName = @"tableViewSingleCell";
+//        selectedBackgroundImageName = @"";
+//    } else if (indexPath.row == 0) {
+//        backgroundImageName = @"tableViewCellTop";
+//    } else if (indexPath.row == numberOfRows -1) {
+//        backgroundImageName = @"tableViewCellBottom";
+//    } else {
+//        backgroundImageName = @"tableViewCellMiddle";
+//    }
+//    
+//    UIImage *image = [[UIImage imageNamed:backgroundImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+//    cell.backgroundView = [[UIImageView alloc] initWithImage:image];
+//    
+//    UIImage *selectedImage = [[UIImage imageNamed:selectedBackgroundImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+//    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:selectedImage];
+//}
+
 
 
 

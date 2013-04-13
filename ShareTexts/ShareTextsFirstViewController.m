@@ -23,6 +23,9 @@
 
 @implementation ShareTextsFirstViewController
 
+{}
+#pragma mark view lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -31,6 +34,22 @@
     NSLog(@"This is the Share Text View Controller");
     
 }
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self setupDataModel];
+    [self.tableView reloadData];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark nsuser defaults
 
 - (void)setupDataModel
 {
@@ -45,18 +64,13 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:YES];
-    [self setupDataModel];
-    [self.tableView reloadData];
-}
+#pragma mark buttons
 
-
-- (void)didReceiveMemoryWarning
+- (IBAction)back:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (IBAction)addConversationButton:(id)sender
@@ -67,79 +81,62 @@
     [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
     [dateFormatter setDateStyle:NSDateFormatterLongStyle];
     NSDate *date = [NSDate date];
-
+    
     NSLog(@"%@", [dateFormatter stringFromDate:date]);
-    
-    
-    
-    
-    
-    
+
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
         UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
         
         imagePicker.sourceType =  UIImagePickerControllerSourceTypeSavedPhotosAlbum;
         imagePicker.delegate = self;
-				//[self presentViewController:imagePicker animated:YES
-					//							 completion:^{
-				//}];
+        //[self presentViewController:imagePicker animated:YES
+        //							 completion:^{
+        //}];
     }
-		
-		
-		
-		
-		
-		AGImagePickerController *imagePickerController = [[AGImagePickerController alloc] initWithFailureBlock:^(NSError *error) {
-				
-				
-				
-						if (error == nil)
-				{
-						NSLog(@"User has cancelled.");
-						//[self dismissModalViewControllerAnimated:YES];
-						[self dismissViewControllerAnimated:YES completion:^{
-								
-						}];
-				} else
-				{
-						NSLog(@"Error: %@", error);
-						
-						// Wait for the view controller to show first and hide it after that
-						double delayInSeconds = 0.5;
-						dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-						dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-								[self dismissViewControllerAnimated:YES completion:^{
-										
-								}];
-						});
-				}
-				
-				[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
-				
-		} andSuccessBlock:^(NSArray *info) {
-				NSLog(@"Info: %@", info);
-				[self dismissViewControllerAnimated:YES completion:^{
-						
-				}];
-				[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
-		}];
-		
-		//[self presentModalViewController:imagePickerController animated:YES];
-		
-		[self presentViewController:imagePickerController animated:YES
-										 completion:^{
-												 
-												 
-												
-										 }];
-		
+    
+    AGImagePickerController *imagePickerController = [[AGImagePickerController alloc] initWithFailureBlock:^(NSError *error) {
+        
+        if (error == nil)
+        {
+            NSLog(@"User has cancelled.");
+            //[self dismissModalViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+        } else
+        {
+            NSLog(@"Error: %@", error);
+            
+            // Wait for the view controller to show first and hide it after that
+            double delayInSeconds = 0.5;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                [self dismissViewControllerAnimated:YES completion:^{
+                    
+                }];
+            });
+        }
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+        
+    } andSuccessBlock:^(NSArray *info) {
+        NSLog(@"Info: %@", info);
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    }];
+    
+    //[self presentModalViewController:imagePickerController animated:YES];
+    
+    [self presentViewController:imagePickerController animated:YES
+                     completion:^{
+                     }];
 }
 
+#pragma mark image picker controller
 
-
--(void)imagePickerController:
-(UIImagePickerController *)picker
-didFinishPickingMediaWithInfo:(NSDictionary *)info
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 		
 		/*
@@ -160,18 +157,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 		
 }
 
--(void)imagePickerControllerDidCancel:
-(UIImagePickerController *)picker
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
 		[self dismissViewControllerAnimated:YES completion:nil];
 }
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 1;
-//}
+
+#pragma mark uitableview datasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -179,7 +171,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     return self.historyOfConversations.count;
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

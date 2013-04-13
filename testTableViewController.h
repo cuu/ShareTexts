@@ -11,9 +11,7 @@
 @interface testTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
 @property (strong, nonatomic) NSMutableArray *userDateBase;
-
 @property (strong, nonatomic) NSString *checkingEmailForLogIn;
 
 @end

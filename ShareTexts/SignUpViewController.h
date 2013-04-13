@@ -11,12 +11,7 @@
 @interface SignUpViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *emailSignUpTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *passwordSignUpTextField;
-
-
 @end

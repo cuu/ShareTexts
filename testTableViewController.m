@@ -26,6 +26,8 @@
     return self;
 }
 
+#pragma mark view lifecycle
+
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
@@ -46,7 +48,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     NSLog(@"this is the test table view controller");
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,19 +58,21 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//#warning Potentially incomplete method implementation.
+//    // Return the number of sections.
+//    return 1;
+//}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return self.userDateBase.count;
-}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//#warning Incomplete method implementation.
+//    // Return the number of rows in the section.
+//    return self.userDateBase.count;
+//}
+
+#pragma mark nsuser defaults
 
 - (void)setupDataModel
 {
@@ -83,7 +86,6 @@
     }
     
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

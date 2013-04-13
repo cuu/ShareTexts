@@ -23,6 +23,8 @@
     return self;
 }
 
+#pragma mark view lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,18 +42,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark buttoms
+
+- (IBAction)back:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 1;
 }

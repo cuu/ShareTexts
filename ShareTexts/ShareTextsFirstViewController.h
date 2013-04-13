@@ -9,11 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ShareTextsFirstViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-//@property (weak, nonatomic) IBOutlet UILabel *recipientLabel;
-//@property (weak, nonatomic) IBOutlet UILabel *numberOfImages;
-//@property (weak, nonatomic) IBOutlet UILabel *dateSent;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end
