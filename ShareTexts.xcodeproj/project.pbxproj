@@ -192,16 +192,16 @@
 				F7C6FC1F170F3F6B00F53F51 /* SignUpViewController.m */,
 				F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */,
 				F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */,
+				F72E188D170BE05600CF4962 /* ShareTextsCell.h */,
+				F72E188E170BE05600CF4962 /* ShareTextsCell.m */,
 				F7BEDE68170C880F000F1108 /* testTableViewController.h */,
 				F7BEDE69170C880F000F1108 /* testTableViewController.m */,
+				F7C6FC211710A53500F53F51 /* TestTableCell.h */,
+				F7C6FC221710A53500F53F51 /* TestTableCell.m */,
 				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
 				F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */,
 				F785AE291715F9BC00A0C5DE /* LogInTextFieldsTableView.h */,
 				F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */,
-				F72E188D170BE05600CF4962 /* ShareTextsCell.h */,
-				F72E188E170BE05600CF4962 /* ShareTextsCell.m */,
-				F7C6FC211710A53500F53F51 /* TestTableCell.h */,
-				F7C6FC221710A53500F53F51 /* TestTableCell.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

@@ -30,7 +30,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-g9-Qcd">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="6kG-Id-Z9G"/>
+                                    <constraint firstAttribute="height" constant="39" id="puP-ID-QCb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="add conversation" backgroundImage="brown bar.png">
@@ -126,8 +126,8 @@
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fqo-gf-XKK">
                                 <items>
-                                    <navigationItem title="Title" id="tzA-bE-xGG">
-                                        <barButtonItem key="leftBarButtonItem" title="back" id="DJP-F3-mw5">
+                                    <navigationItem id="tzA-bE-xGG">
+                                        <barButtonItem key="leftBarButtonItem" title="log out" id="DJP-F3-mw5">
                                             <color key="tintColor" red="0.91764712329999998" green="0.84313732389999996" blue="0.82352948189999997" alpha="1" colorSpace="deviceRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="2" id="4Rr-GJ-GVX"/>
@@ -156,6 +156,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
                     <navigationItem key="navigationItem" id="dyW-pi-AXn"/>
                     <connections>
+                        <outlet property="navigationBar" destination="tzA-bE-xGG" id="tnj-5W-WVz"/>
                         <outlet property="tableView" destination="V0f-8o-xIf" id="uLr-pC-SYu"/>
                     </connections>
                 </viewController>
@@ -263,7 +264,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwm-UP-WQO">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Gwm-UP-WQO">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="73" id="bZZ-RF-Q8H"/>
                                 </constraints>
@@ -453,11 +454,12 @@
                         <outlet property="firstNameTextField" destination="5Ac-CV-wV8" id="Qm9-Xd-QG9"/>
                         <outlet property="lastNameTextField" destination="VjR-i8-Jtw" id="A7R-Kw-0qV"/>
                         <outlet property="passwordSignUpTextField" destination="5Da-Ff-ow8" id="hty-k8-gly"/>
+                        <segue destination="UDV-OG-whT" kind="modal" identifier="backToSignIn" modalTransitionStyle="flipHorizontal" id="rVj-Xy-QZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yv8-6z-Wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1533" y="-959"/>
+            <point key="canvasLocation" x="-1319" y="-1070"/>
         </scene>
         <!--Add Texts Table View Controller-->
         <scene sceneID="r8L-2B-wWK">
@@ -481,7 +483,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGx-og-7G2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-809" y="-1055"/>
+            <point key="canvasLocation" x="-809" y="-1125"/>
         </scene>
         <!--Log In View Controller - Sign In-->
         <scene sceneID="SLp-EU-IYA">
@@ -516,7 +518,6 @@
                                 </state>
                                 <connections>
                                     <action selector="logInButton:" destination="UDV-OG-whT" eventType="touchUpInside" id="sfz-qQ-DP4"/>
-                                    <segue destination="2" kind="modal" id="9au-iL-adP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67y-Ku-h6O">
@@ -534,7 +535,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpButton:" destination="UDV-OG-whT" eventType="touchUpInside" id="kQ5-ln-s56"/>
-                                    <segue destination="9Et-Rc-FXc" kind="modal" identifier="toSignUpViewFromSignInView" modalTransitionStyle="flipHorizontal" id="sLr-sA-aqS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPP-Kn-wrz">
@@ -622,7 +622,6 @@
                         <color key="backgroundColor" red="0.92549026010000002" green="0.87843143940000001" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="Q57-6I-xAl" firstAttribute="leading" secondItem="wAK-vi-KsI" secondAttribute="leading" type="default" id="12m-w7-14f"/>
-                            <constraint firstAttribute="bottom" secondItem="H18-Uy-7JY" secondAttribute="bottom" constant="215" id="6Fk-Qj-Aif"/>
                             <constraint firstAttribute="bottom" secondItem="wAK-vi-KsI" secondAttribute="bottom" constant="134" id="6PQ-md-7BQ"/>
                             <constraint firstItem="2R5-Q9-1hq" firstAttribute="top" secondItem="zWl-TY-Qim" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6jD-Eb-mgv"/>
                             <constraint firstItem="wAK-vi-KsI" firstAttribute="top" secondItem="x3O-bU-HkP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BZS-zV-2RX"/>
@@ -644,6 +643,7 @@
                             <constraint firstItem="tbd-b4-NEG" firstAttribute="leading" secondItem="2dF-ad-8d4" secondAttribute="leading" type="default" id="dIy-8x-LXO"/>
                             <constraint firstItem="67y-Ku-h6O" firstAttribute="centerY" secondItem="sPP-Kn-wrz" secondAttribute="centerY" type="default" id="eTY-d6-Kl1"/>
                             <constraint firstItem="H18-Uy-7JY" firstAttribute="leading" secondItem="2dF-ad-8d4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gUy-pL-t6g"/>
+                            <constraint firstItem="H18-Uy-7JY" firstAttribute="top" secondItem="2dF-ad-8d4" secondAttribute="top" constant="207" id="iF5-RU-QYf"/>
                             <constraint firstItem="csT-SV-wun" firstAttribute="top" secondItem="2dF-ad-8d4" secondAttribute="top" constant="119" id="pc5-QR-yxK"/>
                             <constraint firstAttribute="trailing" secondItem="H18-Uy-7JY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qbe-0X-2rO"/>
                             <constraint firstItem="abC-Rt-mWK" firstAttribute="top" secondItem="2dF-ad-8d4" secondAttribute="top" constant="70" id="sqB-HI-3Pz"/>
@@ -655,11 +655,13 @@
                     <connections>
                         <outlet property="passwordTextField" destination="wAK-vi-KsI" id="KOl-AK-dUg"/>
                         <outlet property="usernameOrEmailTextField" destination="x3O-bU-HkP" id="6zG-c2-MTy"/>
+                        <segue destination="2" kind="modal" identifier="toShareTexts" id="y9h-Cr-pmI"/>
+                        <segue destination="9Et-Rc-FXc" kind="modal" identifier="toSignUpFromSignIn" modalTransitionStyle="flipHorizontal" id="x2V-4W-1yo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85Z-ZV-BxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1223" y="-1735"/>
+            <point key="canvasLocation" x="-1319" y="-1743"/>
         </scene>
         <!--Test Table View Controller-->
         <scene sceneID="fyK-om-erA">
@@ -826,82 +828,13 @@
         <image name="line.png" width="595" height="42"/>
         <image name="speech bubble .png" width="280" height="245"/>
     </resources>
-    <classes>
-        <class className="AddTextsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTextsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-            </relationships>
-        </class>
-        <class className="LogInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="facebookSignInButton:"/>
-                <relationship kind="action" name="googleSignInButton:"/>
-                <relationship kind="action" name="logInButton:"/>
-                <relationship kind="action" name="signUpButton:"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameOrEmailTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ShareTextsCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShareTextsCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateSentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numberOfPicsSentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recipientSentLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ShareTextsFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShareTextsFirstViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SignUpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="outlet" name="emailSignUpTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lastNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordSignUpTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="TestTableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestTableCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="genderLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lastNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="WelcomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signInWelcomeButton:"/>
-                <relationship kind="action" name="signUpWelcomeButton:"/>
-            </relationships>
-        </class>
-        <class className="testTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/testTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sLr-sA-aqS"/>
+        <segue reference="rVj-Xy-QZx"/>
+        <segue reference="x2V-4W-1yo"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -29,9 +29,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     
-    NSLog(@"This is the Share Text View Controller");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.navigationBar.title = [NSString stringWithFormat:@"%@%@",[defaults objectForKey:@"first name"], @"'s profile"];
+    
+   // self.navigationBar.title = @"yo bitch";
+    //self.navigationItem.title = @"hello there";
+    
+    NSLog(@"view did load");
     
 }
 
@@ -41,6 +48,11 @@
     [super viewWillAppear:YES];
     [self setupDataModel];
     [self.tableView reloadData];
+    
+   // self.navigationBar.title = @"yo bitch";
+    
+    NSLog(@"share texts first view controller: view will appear");
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -19,4 +19,8 @@
 
 @property (nonatomic, strong) testTableViewController *ttvc;
 
+@property (nonatomic, strong) NSMutableArray *userDateBase;
+
+
+
 @end

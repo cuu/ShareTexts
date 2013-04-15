@@ -33,7 +33,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+        
     [super viewWillAppear:animated];
+    
+    self.usernameOrEmailTextField.text = @"";
+    self.passwordTextField.text = @"";
     
     UIButton *loginButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 160, 300, 400)];
     loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -48,6 +52,19 @@
 {
     // committing
     [super viewDidLoad];
+  
+    
+ 
+    
+    
+    NSDictionary *userInfo = self.userDateBase;
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *theNameString = [defaults objectForKey:@"first name"];
+    
+    
+    NSString *theOtherNameString = userInfo[kUserName];
+    NSLog(@"This is the person's first name: %@", theNameString);
     
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
@@ -102,12 +119,37 @@
     //    UINavigationBar *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:nil];
     //    self.navigationItem.rightBarButtonItem = barButton;
     
+    
+    
+    
+    
 }
+
 
 - (void) viewDidAppear:(BOOL)animated
 {
     
     NSLog(@"viewDidAppear: Did this appear");
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *emailValuePassed = [defaults objectForKey:@"email"];
+    NSString *passwordValuePassed = [defaults objectForKey:@"password"];
+    
+    
+    
+    NSLog(@"This is the person's email and password: %@, %@", emailValuePassed, passwordValuePassed);
+    
+    
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
+	self.navigationItem.leftBarButtonItem = cancelButton;
+    
+    NSLog(@"did this view even load?");
+    
+    
+    
+ 
+    
+ //    NSLog(@"these are the values: %@", userInfo);
     
 }
 
@@ -128,6 +170,23 @@
 }
 
 
+- (void)setupDataModel
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSLog(@"what is the value of defaults anyway: %@", defaults);
+    
+    // load from defaults an array of past emails. The array will contain a dictionary for each past email. Each dictionary will contain the recipient, count, and date. Add the current sent email info to this array then resave back into defaults.
+    
+    self.userDateBase  = [defaults objectForKey:@"userDataBase"];
+    if (self.userDateBase == nil) {
+        self.userDateBase = [NSArray array];
+    }
+    
+}
+
+
+
 #pragma mark buttons
 
 - (IBAction)cancel:(id)sender
@@ -140,30 +199,37 @@
 - (IBAction)logInButton:(id)sender
 {
     
-    if (self.usernameOrEmailTextField.text.length == 0 || self.passwordTextField.text.length == 0 ) {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if (self.usernameOrEmailTextField.text.length == 0 && self.passwordTextField.text.length == 0 ) {
         
         UIAlertView *emptyTextAlert = [[UIAlertView alloc] initWithTitle:nil message:@"You must fill out both fields to proceed" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [emptyTextAlert show];
         return;
         
-        ShareTextsFirstViewController *stfvc = [[ShareTextsFirstViewController alloc] init];
+    } else if (self.usernameOrEmailTextField.text.length == 0 && self.passwordTextField.text.length != 0)  {
+        UIAlertView *emptyTextAlert = [[UIAlertView alloc] initWithTitle:nil message:@"You must enter your username or email to proceed" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [emptyTextAlert show];
+        return;
+    } else if (self.passwordTextField.text.length == 0 && self.usernameOrEmailTextField.text.length != 0)  {
+        UIAlertView *emptyTextAlert = [[UIAlertView alloc] initWithTitle:nil message:@"You must enter your password to proceed" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [emptyTextAlert show];
+        return;
+    } else if (![self.passwordTextField.text isEqualToString:[defaults objectForKey:@"password"]] || ![self.usernameOrEmailTextField.text isEqualToString:[defaults objectForKey:@"email"]]) {
+        UIAlertView *emptyTextAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Incorrect login info entered" delegate:self cancelButtonTitle:nil otherButtonTitles:@"try again", nil];
+        [emptyTextAlert show];
+        return;
+    } else if ([self.passwordTextField.text isEqualToString:[defaults objectForKey:@"password"]] && [self.usernameOrEmailTextField.text isEqualToString:[defaults objectForKey:@"email"]]) {
         
-        [self presentViewController: stfvc animated:YES completion:^{
-            
-        }];
-//    } else {
-//        [self performSegueWithIdentifier:@"toShareTexts" sender:self];
-        
-        
-            }
+        [self performSegueWithIdentifier:@"toShareTexts" sender:sender];
+    } 
 }
 
 - (IBAction)signUpButton:(id)sender
 {
-    SignUpViewController *sivc = [[SignUpViewController alloc] init];
-    [sivc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    [self presentViewController:sivc animated:YES completion:^{
-    }];
+    
+    [self performSegueWithIdentifier:@"toSignUpFromSignIn" sender:sender];
+    
 }
 
 - (IBAction)googleSignInButton:(id)sender
@@ -184,13 +250,16 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    
+    
     //keyboardIsPresentOnWindow
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.2];
-    self.view.center = CGPointMake(self.originalCenter.x,280);
+    self.view.center = CGPointMake(self.originalCenter.x,295);
     [UIView commitAnimations];
     
     // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
+    
     
 }
 
@@ -203,6 +272,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.5];
     self.view.center = CGPointMake(self.originalCenter.x, 185);
@@ -210,6 +280,7 @@
     
     // self.view.frame = CGRectMake(0, 120, 320,400);
     [UIView commitAnimations];
+    
     
 }
 
@@ -222,10 +293,11 @@
 }
 
 
-- (void)keyboardDidShow:(NSNotification *)note
-{
-   // self.view.center = CGPointMake(self.originalCenter.x, 120);
-}
+//- (void)keyboardDidShow:(NSNotification *)note
+//{
+//    
+//   // self.view.center = CGPointMake(self.originalCenter.x, 120);
+//}
 
 
 //- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender

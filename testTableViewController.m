@@ -78,6 +78,8 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
+    NSLog(@"what is the value of defaults anyway: %@", defaults);
+    
     // load from defaults an array of past emails. The array will contain a dictionary for each past email. Each dictionary will contain the recipient, count, and date. Add the current sent email info to this array then resave back into defaults.
     
     self.userDateBase  = [defaults objectForKey:@"userDataBase"];
@@ -86,6 +88,16 @@
     }
     
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.userDateBase.count;
+    
+    // or should it be
+    //return self.historyOfConversations.count;
+}
+
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,6 +109,8 @@
         cell = [[TestTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    
+    
     NSDictionary *userInfo = self.userDateBase[indexPath.row];
     
     cell.lastNameLabel.text = userInfo[@"first name"];
@@ -104,9 +118,10 @@
     cell.emailLabel.text = userInfo[@"email"];
     cell.passwordLabel.text = userInfo[@"password"];
     
+    
     self.checkingEmailForLogIn = userInfo[@"email"];
     
-    NSLog(@"what is this value: %@", self.checkingEmailForLogIn);
+    NSLog(@"what is this total value (table-cell): %@", userInfo);
     
     return cell;
 }
