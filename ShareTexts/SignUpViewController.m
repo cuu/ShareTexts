@@ -59,11 +59,13 @@
 
 #pragma mark buttons
 
-- (IBAction)cancel:(id)sender
+- (IBAction)backToSignInButton:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    // [self prepareForSegue:@"backToSignIn" sender:sender];
+    [self performSegueWithIdentifier:@"backToSignIn" sender:sender];
+    //    [self dismissViewControllerAnimated:YES completion:^{
+    //
+    //    }];
 }
 
 - (IBAction)submitButton:(id)sender

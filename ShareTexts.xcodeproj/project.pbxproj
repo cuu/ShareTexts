@@ -46,7 +46,6 @@
 		F785AE8B17191A0A00A0C5DE /* speech bubble .png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE8A17191A0800A0C5DE /* speech bubble .png */; };
 		F785AE8E17191A2500A0C5DE /* SignIn.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE8C17191A2200A0C5DE /* SignIn.png */; };
 		F785AE8F17191A2500A0C5DE /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = F785AE8D17191A2300A0C5DE /* SignUp.png */; };
-		F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */; };
 		F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F51702603D009E5FCA /* UIKit.framework */; };
 		F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F71702603D009E5FCA /* Foundation.framework */; };
 		F7A936FA1702603D009E5FCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A936F91702603D009E5FCA /* CoreGraphics.framework */; };
@@ -72,6 +71,7 @@
 		F7C6FC1D170F3E0E00F53F51 /* facebookbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C6FC1C170F3E0E00F53F51 /* facebookbutton.png */; };
 		F7C6FC20170F3F6B00F53F51 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6FC1F170F3F6B00F53F51 /* SignUpViewController.m */; };
 		F7C6FC231710A53500F53F51 /* TestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6FC221710A53500F53F51 /* TestTableCell.m */; };
+		F7D7F47A1720EB3800310149 /* DetailTextsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7F4791720EB3800310149 /* DetailTextsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,8 +128,6 @@
 		F785AE8A17191A0800A0C5DE /* speech bubble .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech bubble .png"; sourceTree = "<group>"; };
 		F785AE8C17191A2200A0C5DE /* SignIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignIn.png; sourceTree = "<group>"; };
 		F785AE8D17191A2300A0C5DE /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
-		F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextsTableViewController.h; path = ../AddTextsTableViewController.h; sourceTree = "<group>"; };
-		F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextsTableViewController.m; path = ../AddTextsTableViewController.m; sourceTree = "<group>"; };
 		F7A936F21702603D009E5FCA /* ShareTexts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTexts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A936F51702603D009E5FCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7A936F71702603D009E5FCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -163,6 +161,8 @@
 		F7C6FC1F170F3F6B00F53F51 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		F7C6FC211710A53500F53F51 /* TestTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableCell.h; sourceTree = "<group>"; };
 		F7C6FC221710A53500F53F51 /* TestTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableCell.m; sourceTree = "<group>"; };
+		F7D7F4781720EB3800310149 /* DetailTextsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTextsViewController.h; sourceTree = "<group>"; };
+		F7D7F4791720EB3800310149 /* DetailTextsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTextsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,14 +192,14 @@
 				F7C6FC1F170F3F6B00F53F51 /* SignUpViewController.m */,
 				F7A937101702603D009E5FCA /* ShareTextsFirstViewController.h */,
 				F7A937111702603D009E5FCA /* ShareTextsFirstViewController.m */,
+				F7D7F4781720EB3800310149 /* DetailTextsViewController.h */,
+				F7D7F4791720EB3800310149 /* DetailTextsViewController.m */,
 				F72E188D170BE05600CF4962 /* ShareTextsCell.h */,
 				F72E188E170BE05600CF4962 /* ShareTextsCell.m */,
 				F7BEDE68170C880F000F1108 /* testTableViewController.h */,
 				F7BEDE69170C880F000F1108 /* testTableViewController.m */,
 				F7C6FC211710A53500F53F51 /* TestTableCell.h */,
 				F7C6FC221710A53500F53F51 /* TestTableCell.m */,
-				F79EF0961704B93C006867B7 /* AddTextsTableViewController.h */,
-				F79EF0971704B93C006867B7 /* AddTextsTableViewController.m */,
 				F785AE291715F9BC00A0C5DE /* LogInTextFieldsTableView.h */,
 				F785AE2A1715F9BC00A0C5DE /* LogInTextFieldsTableView.m */,
 			);
@@ -445,7 +445,6 @@
 				F7A937021702603D009E5FCA /* main.m in Sources */,
 				F7A937061702603D009E5FCA /* ShareTextsAppDelegate.m in Sources */,
 				F7A937121702603D009E5FCA /* ShareTextsFirstViewController.m in Sources */,
-				F79EF0981704B93C006867B7 /* AddTextsTableViewController.m in Sources */,
 				6007A0481708749000B3891B /* AGImagePickerController+Helper.m in Sources */,
 				6007A04A1708749000B3891B /* AGImagePickerController.m in Sources */,
 				6007A04B1708749000B3891B /* AGIPCAlbumsController.m in Sources */,
@@ -461,6 +460,7 @@
 				605EC6851710F19800DD4D82 /* AGIPCAssetsController.m in Sources */,
 				F785AE2B1715F9BC00A0C5DE /* LogInTextFieldsTableView.m in Sources */,
 				F785AE6317175D3800A0C5DE /* WelcomeViewController.m in Sources */,
+				F7D7F47A1720EB3800310149 /* DetailTextsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

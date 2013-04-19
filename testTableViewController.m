@@ -40,6 +40,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+   //[[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@%@",[defaults objectForKey:@"first name"], @"'s profile"];
+    
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -55,6 +62,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Buttons
+
+- (IBAction)backButton:(id)sender
+{
+[self dismissViewControllerAnimated:YES completion:^{
+    
+}];
+}
+
 
 #pragma mark - Table view data source
 

@@ -52,6 +52,10 @@
 {
     // committing
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+
   
     
  
@@ -245,22 +249,38 @@
     
 }
 
+
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    //Assign new frame to your view
+    [self.view setFrame:CGRectMake(0,-20,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+    
+}
+
+-(void)keyboardDidHide:(NSNotification *)notification
+{
+    [self.view setFrame:CGRectMake(0,0,320,460)];
+}
+
+
+
 #pragma mark notifications
 
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     
-    
-    //keyboardIsPresentOnWindow
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:.2];
-    self.view.center = CGPointMake(self.originalCenter.x,295);
-    [UIView commitAnimations];
-    
-    // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
-    
-    
+//    
+//    //keyboardIsPresentOnWindow
+//    [UIView beginAnimations:nil context:NULL];
+//    [UIView setAnimationDuration:.2];
+//    self.view.center = CGPointMake(self.originalCenter.x,295);
+//    [UIView commitAnimations];
+//    
+//    // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
+//    
+//    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -272,17 +292,12 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:.5];
-    self.view.center = CGPointMake(self.originalCenter.x, 185);
-    
-    
-    // self.view.frame = CGRectMake(0, 120, 320,400);
-    [UIView commitAnimations];
-    
-    
+//     
+//        [UIView beginAnimations:nil context:NULL];
+//        [UIView setAnimationDuration:.5];
+//        self.view.center = CGPointMake(self.originalCenter.x, 185);
 }
+
 
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField

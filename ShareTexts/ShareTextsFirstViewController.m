@@ -30,6 +30,11 @@
 {
     [super viewDidLoad];
     
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
+    [self.tableView reloadData];
+
+    
 	// Do any additional setup after loading the view, typically from a nib.
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -88,6 +93,7 @@
 - (IBAction)addConversationButton:(id)sender
 {
     NSLog(@"add convo button tapped");
+    
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
@@ -196,6 +202,7 @@
     }
     
     
+    
     //SLdatabase
     NSDictionary *currentEmail = self.historyOfConversations[indexPath.row];
     
@@ -206,6 +213,7 @@
     NSLog(@" the date is %@", dateString);
     
     
+
     cell.dateSentLabel.text = currentEmail[@"date"];
     
     //Recipient
@@ -217,8 +225,22 @@
     NSString *image = theNumber > 1 ? @"images" : @"image";
     cell.numberOfPicsSentLabel.text = [NSString stringWithFormat:@"%i %@", theNumber, image];
     
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+
+    
     return cell;
 }
+
+
+#pragma mark uitableview delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"toDetailTexts" sender:tableView];
+}
+
+
+
 
 
 
