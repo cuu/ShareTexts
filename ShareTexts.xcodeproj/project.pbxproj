@@ -61,6 +61,13 @@
 		F7A937161702603D009E5FCA /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A937151702603D009E5FCA /* first@2x.png */; };
 		F7A9371B1702603D009E5FCA /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371A1702603D009E5FCA /* second.png */; };
 		F7A9371D1702603D009E5FCA /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A9371C1702603D009E5FCA /* second@2x.png */; };
+		F7B942D0172B028900201A68 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B942CF172B028900201A68 /* FacebookSDK.framework */; };
+		F7B942D2172B02EE00201A68 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F7B942D1172B02EE00201A68 /* FacebookSDKResources.bundle */; };
+		F7B942D8172B057000201A68 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B942D3172B057000201A68 /* Accounts.framework */; };
+		F7B942D9172B057000201A68 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B942D4172B057000201A68 /* AdSupport.framework */; };
+		F7B942DA172B057000201A68 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B942D5172B057000201A68 /* libsqlite3.dylib */; };
+		F7B942DB172B057000201A68 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B942D6172B057000201A68 /* Security.framework */; };
+		F7B942DC172B057000201A68 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B942D7172B057000201A68 /* Social.framework */; };
 		F7BEDE6A170C880F000F1108 /* testTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BEDE69170C880F000F1108 /* testTableViewController.m */; };
 		F7BEDE6C170D2A20000F1108 /* addConversationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BEDE6B170D2A20000F1108 /* addConversationButton.png */; };
 		F7BEDE6E170D2D34000F1108 /* previousConvosSent.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BEDE6D170D2D34000F1108 /* previousConvosSent.png */; };
@@ -72,6 +79,7 @@
 		F7C6FC20170F3F6B00F53F51 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6FC1F170F3F6B00F53F51 /* SignUpViewController.m */; };
 		F7C6FC231710A53500F53F51 /* TestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6FC221710A53500F53F51 /* TestTableCell.m */; };
 		F7D7F47A1720EB3800310149 /* DetailTextsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7F4791720EB3800310149 /* DetailTextsViewController.m */; };
+		F7D7F47C1721AFA300310149 /* ruggedWallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D7F47B1721AFA300310149 /* ruggedWallpaper.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +156,13 @@
 		F7A937151702603D009E5FCA /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		F7A9371A1702603D009E5FCA /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		F7A9371C1702603D009E5FCA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		F7B942CF172B028900201A68 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		F7B942D1172B02EE00201A68 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		F7B942D3172B057000201A68 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F7B942D4172B057000201A68 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F7B942D5172B057000201A68 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F7B942D6172B057000201A68 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F7B942D7172B057000201A68 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F7BEDE68170C880F000F1108 /* testTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testTableViewController.h; path = ../testTableViewController.h; sourceTree = "<group>"; };
 		F7BEDE69170C880F000F1108 /* testTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testTableViewController.m; path = ../testTableViewController.m; sourceTree = "<group>"; };
 		F7BEDE6B170D2A20000F1108 /* addConversationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addConversationButton.png; sourceTree = "<group>"; };
@@ -163,6 +178,7 @@
 		F7C6FC221710A53500F53F51 /* TestTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableCell.m; sourceTree = "<group>"; };
 		F7D7F4781720EB3800310149 /* DetailTextsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTextsViewController.h; sourceTree = "<group>"; };
 		F7D7F4791720EB3800310149 /* DetailTextsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTextsViewController.m; sourceTree = "<group>"; };
+		F7D7F47B1721AFA300310149 /* ruggedWallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ruggedWallpaper.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,11 +186,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7B942D8172B057000201A68 /* Accounts.framework in Frameworks */,
+				F7B942D9172B057000201A68 /* AdSupport.framework in Frameworks */,
+				F7B942DA172B057000201A68 /* libsqlite3.dylib in Frameworks */,
+				F7B942DB172B057000201A68 /* Security.framework in Frameworks */,
+				F7B942DC172B057000201A68 /* Social.framework in Frameworks */,
 				6007A034170858FB00B3891B /* MessageUI.framework in Frameworks */,
 				6007A0321707FDEB00B3891B /* AssetsLibrary.framework in Frameworks */,
 				F7A936F61702603D009E5FCA /* UIKit.framework in Frameworks */,
 				F7A936F81702603D009E5FCA /* Foundation.framework in Frameworks */,
 				F7A936FA1702603D009E5FCA /* CoreGraphics.framework in Frameworks */,
+				F7B942D0172B028900201A68 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +301,13 @@
 		F7A936F41702603D009E5FCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7B942D3172B057000201A68 /* Accounts.framework */,
+				F7B942D4172B057000201A68 /* AdSupport.framework */,
+				F7B942D5172B057000201A68 /* libsqlite3.dylib */,
+				F7B942D6172B057000201A68 /* Security.framework */,
+				F7B942D7172B057000201A68 /* Social.framework */,
+				F7B942D1172B02EE00201A68 /* FacebookSDKResources.bundle */,
+				F7B942CF172B028900201A68 /* FacebookSDK.framework */,
 				F7A936F51702603D009E5FCA /* UIKit.framework */,
 				F7A936F71702603D009E5FCA /* Foundation.framework */,
 				F7A936F91702603D009E5FCA /* CoreGraphics.framework */,
@@ -304,6 +333,7 @@
 			children = (
 				F785AE7A1718E9CA00A0C5DE /* launchImageSmall.png */,
 				F785AE7B1718E9CB00A0C5DE /* launchImageBig.png */,
+				F7D7F47B1721AFA300310149 /* ruggedWallpaper.png */,
 				F785AE78171792F100A0C5DE /* G_of_google.png */,
 				F785AE761717923B00A0C5DE /* facebook f.png */,
 				F785AE7417178FDB00A0C5DE /* brown bar.png */,
@@ -432,6 +462,8 @@
 				F785AE8B17191A0A00A0C5DE /* speech bubble .png in Resources */,
 				F785AE8E17191A2500A0C5DE /* SignIn.png in Resources */,
 				F785AE8F17191A2500A0C5DE /* SignUp.png in Resources */,
+				F7D7F47C1721AFA300310149 /* ruggedWallpaper.png in Resources */,
+				F7B942D2172B02EE00201A68 /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +577,10 @@
 		F7A937211702603D009E5FCA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareTexts/ShareTexts-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -558,6 +594,10 @@
 		F7A937221702603D009E5FCA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareTexts/ShareTexts-Prefix.pch";
 				INFOPLIST_FILE = "ShareTexts/ShareTexts-Info.plist";

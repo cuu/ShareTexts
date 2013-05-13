@@ -13,6 +13,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 
+
 @interface LogInViewController ()
 
 @end
@@ -32,9 +33,11 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    //[self.navigationController setNavigationBarHidden:YES animated:animated];
         
     [super viewWillAppear:animated];
+    
+
     
     self.usernameOrEmailTextField.text = @"";
     self.passwordTextField.text = @"";
@@ -46,6 +49,7 @@
     loginButton.layer.borderColor = [UIColor redColor].CGColor;
     loginButton.layer.borderWidth = 0.5f;
     loginButton.layer.cornerRadius = 10.0f;
+    
 }
 
 - (void)viewDidLoad
@@ -53,13 +57,16 @@
     // committing
     [super viewDidLoad];
     
+    NSLog(@"the login view appeared"); 
+    
+    //changing background to rugged look
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ruggedWallpaper.png"]]];
+    
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 
-  
-    
- 
-    
+
     
     NSDictionary *userInfo = self.userDateBase;
 
@@ -71,8 +78,8 @@
     NSLog(@"This is the person's first name: %@", theNameString);
     
     
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
-	self.navigationItem.leftBarButtonItem = cancelButton;
+//    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
+//	self.navigationItem.leftBarButtonItem = cancelButton;
     
     NSLog(@"did this view even load?");
     
@@ -122,11 +129,7 @@
     
     //    UINavigationBar *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:nil];
     //    self.navigationItem.rightBarButtonItem = barButton;
-    
-    
-    
-    
-    
+  
 }
 
 
@@ -144,8 +147,8 @@
     NSLog(@"This is the person's email and password: %@, %@", emailValuePassed, passwordValuePassed);
     
     
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
-	self.navigationItem.leftBarButtonItem = cancelButton;
+//    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
+//	self.navigationItem.leftBarButtonItem = cancelButton;
     
     NSLog(@"did this view even load?");
     
@@ -253,14 +256,52 @@
 
 - (void)keyboardDidShow:(NSNotification *)notification
 {
-    //Assign new frame to your view
-    [self.view setFrame:CGRectMake(0,-20,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
     
+    
+    //Assign new frame to your view
+    //    [self.view setFrame:CGRectMake(0,-20,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if (screenSize.height > 480.0f) {
+            
+            // iphone 5
+            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 246, 191,30)];
+            [self.passwordTextField setFrame:CGRectMake(65, 284, 191,30)];
+
+        } else {
+            
+            // classic phone
+            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 173, 191,30)];
+            [self.passwordTextField setFrame:CGRectMake(65, 211, 191,30)];
+
+        }
+
+    }
+ 
 }
 
 -(void)keyboardDidHide:(NSNotification *)notification
 {
-    [self.view setFrame:CGRectMake(0,0,320,460)];
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if (screenSize.height > 480.0f) {
+            
+            // iphone 5
+            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 346, 191,30)];
+            [self.passwordTextField setFrame:CGRectMake(65, 384, 191,30)];
+
+        } else {
+            
+            //  classic phone
+            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 258, 191,30)];
+            [self.passwordTextField setFrame:CGRectMake(65, 296, 191,30)];
+
+        }
+        
+    }
 }
 
 

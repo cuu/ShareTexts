@@ -7,6 +7,8 @@
 //
 
 #import "WelcomeViewController.h"
+#import "LogInViewController.h"
+#import "SignUpViewController.h"
 #import <unistd.h>
 
 @interface WelcomeViewController ()
@@ -29,6 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ruggedWallpaper.png"]]];
+
     
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *components = [cal components:( NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ) fromDate:[[NSDate alloc] init]];
@@ -78,17 +83,42 @@
 - (IBAction)signInWelcomeButton:(id)sender
 {
     
-    WelcomeViewController *wvc = [[WelcomeViewController alloc] init];
-    [wvc setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
-    [self presentViewController:wvc animated:YES completion:^{
-        
-    }];
-    
+//    LogInViewController *livc = [[LogInViewController alloc] init];
+//    [self presentViewController:livc animated:YES completion:^{
+//        
+//    }];
+//    
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"toLoginView"])
+    {
+        // Get reference to the destination view controller
+        LogInViewController *livc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+       // [livc setMyObjectHere:object];
+    }
+    
+    else if ([[segue identifier] isEqualToString:@"toSignUpView"])
+    {
+        SignUpViewController *suvc = [segue destinationViewController];
+    
+        
+    }
+}
+
 
 - (IBAction)signUpWelcomeButton:(id)sender
 {
     
+//    // segue for going to 
+//    [self performSegueWithIdentifier:@"toSignUpView" sender:sender];
+//    LogInViewController *livc = [[LogInViewController alloc] init];
+//    [self.navigationController pushViewController:livc animated:YES];
+
 }
 
 //- (id)instantiateViewControllerWithIdentifier:(NSString *)identifier
