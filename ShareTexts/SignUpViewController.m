@@ -7,6 +7,7 @@
 //
 
 #import "SignUpViewController.h"
+#import "WelcomeViewController.h"
 
 
 @interface SignUpViewController ()
@@ -157,4 +158,12 @@
 }
 
 
+- (IBAction)cancelButton:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    
+
+}
 @end

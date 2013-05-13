@@ -63,8 +63,8 @@
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ruggedWallpaper.png"]]];
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 
 
     
@@ -121,7 +121,7 @@
     //    shareTextsLabel.textAlignment = NSTextAlignmentCenter;
     //    [self.view addSubview:shareTextsLabel];
     
-    self.usernameOrEmailTextField.placeholder = @"username or email";
+    self.usernameOrEmailTextField.placeholder = @"first name or email";
     self.usernameOrEmailTextField.delegate = self;
     
     self.passwordTextField.placeholder = @"password";
@@ -226,7 +226,8 @@
         UIAlertView *emptyTextAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Incorrect login info entered" delegate:self cancelButtonTitle:nil otherButtonTitles:@"try again", nil];
         [emptyTextAlert show];
         return;
-    } else if ([self.passwordTextField.text isEqualToString:[defaults objectForKey:@"password"]] && [self.usernameOrEmailTextField.text isEqualToString:[defaults objectForKey:@"email"]]) {
+        
+    } else if (([self.passwordTextField.text isEqualToString:[defaults objectForKey:@"password"]] && [self.usernameOrEmailTextField.text isEqualToString:[defaults objectForKey:@"email"]]) || [self.usernameOrEmailTextField.text isEqualToString:[defaults objectForKey:@"first name"]]) {
         
         [self performSegueWithIdentifier:@"toShareTexts" sender:sender];
     } 
@@ -254,55 +255,55 @@
 
 
 
-- (void)keyboardDidShow:(NSNotification *)notification
-{
-    
-    
-    //Assign new frame to your view
-    //    [self.view setFrame:CGRectMake(0,-20,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
-    
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        if (screenSize.height > 480.0f) {
-            
-            // iphone 5
-            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 246, 191,30)];
-            [self.passwordTextField setFrame:CGRectMake(65, 284, 191,30)];
+//- (void)keyboardDidShow:(NSNotification *)notification
+//{
+//    
+//    
+//    //Assign new frame to your view
+//    //    [self.view setFrame:CGRectMake(0,-20,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+//    
+//    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+//    
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+//        if (screenSize.height > 480.0f) {
+//            
+//            // iphone 5
+//            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 200, 191,30)];
+//            [self.passwordTextField setFrame:CGRectMake(65, 238, 191,30)];
+//
+//        } else {
+//            
+//            // classic phone
+//            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 127, 191,30)];
+//            [self.passwordTextField setFrame:CGRectMake(65, 165, 191,30)];
+//
+//        }
+//
+//    }
+//}
 
-        } else {
-            
-            // classic phone
-            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 173, 191,30)];
-            [self.passwordTextField setFrame:CGRectMake(65, 211, 191,30)];
-
-        }
-
-    }
- 
-}
-
--(void)keyboardDidHide:(NSNotification *)notification
-{
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        if (screenSize.height > 480.0f) {
-            
-            // iphone 5
-            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 346, 191,30)];
-            [self.passwordTextField setFrame:CGRectMake(65, 384, 191,30)];
-
-        } else {
-            
-            //  classic phone
-            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 258, 191,30)];
-            [self.passwordTextField setFrame:CGRectMake(65, 296, 191,30)];
-
-        }
-        
-    }
-}
+//-(void)keyboardDidHide:(NSNotification *)notification
+//{
+//    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+//    
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+//        if (screenSize.height > 480.0f) {
+//            
+//            // iphone 5
+//            
+//            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 302, 191,30)];
+//            [self.passwordTextField setFrame:CGRectMake(65, 340, 191,30)];
+//
+//        } else {
+//            
+//            //  classic phone
+//            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 214, 191,30)];
+//            [self.passwordTextField setFrame:CGRectMake(65, 252, 191,30)];
+//
+//        }
+//        
+//    }
+//}
 
 
 
@@ -326,6 +327,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    // keyboard goes away when clicking outside textfields
     [self.usernameOrEmailTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
 }
@@ -333,7 +335,31 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-//     
+    
+    
+    // move text fields here.
+    
+       CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if (screenSize.height > 480.0f) {
+            
+            // iphone 5
+            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 200, 191,30)];
+            [self.passwordTextField setFrame:CGRectMake(65, 238, 191,30)];
+            
+        } else {
+            
+            // classic phone
+            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 127, 191,30)];
+            [self.passwordTextField setFrame:CGRectMake(65, 165, 191,30)];
+            
+        }
+        
+    }
+
+
+//
 //        [UIView beginAnimations:nil context:NULL];
 //        [UIView setAnimationDuration:.5];
 //        self.view.center = CGPointMake(self.originalCenter.x, 185);
@@ -343,6 +369,31 @@
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField
 {
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if (screenSize.height > 480.0f) {
+            
+            // iphone 5
+            
+            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 302, 191,30)];
+            [self.passwordTextField setFrame:CGRectMake(65, 340, 191,30)];
+            
+        } else {
+            
+            //  classic phone
+            [self.usernameOrEmailTextField setFrame:CGRectMake(65, 214, 191,30)];
+            [self.passwordTextField setFrame:CGRectMake(65, 252, 191,30)];
+            
+        }
+        
+    }
+
+
+    
+    
+    // keyboard goes away when clicking on return
     [self.usernameOrEmailTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
     return NO;

@@ -18,5 +18,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailSignUpTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordSignUpTextField;
 
+
+
 @property (strong, nonatomic) NSDictionary *userInfo;
+- (IBAction)cancelButton:(id)sender;
+
+
 @end

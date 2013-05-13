@@ -257,7 +257,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Gwm-UP-WQO">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="bZZ-RF-Q8H"/>
+                                    <constraint firstAttribute="width" constant="71" id="TAR-Ga-Sxa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -378,28 +378,43 @@
                                 </segments>
                                 <color key="tintColor" red="0.69660750680000005" green="0.01546782384" blue="0.10185641920000001" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVv-NB-u8l">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="9Et-Rc-FXc" eventType="touchUpInside" id="2gi-ax-cSi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91764712329999998" green="0.84313732389999996" blue="0.82352948189999997" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="QDK-uh-DtR" firstAttribute="centerX" secondItem="6NA-VZ-IDr" secondAttribute="centerX" type="default" id="0pT-td-mDF"/>
                             <constraint firstItem="hMa-x9-3Kh" firstAttribute="leading" secondItem="6NA-VZ-IDr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="11s-vN-Tje"/>
                             <constraint firstItem="5Ac-CV-wV8" firstAttribute="leading" secondItem="Voj-sP-DsT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="3Rt-7Z-4iX"/>
                             <constraint firstItem="QIv-Y2-Gvn" firstAttribute="leading" secondItem="6NA-VZ-IDr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4Sh-BH-WoA"/>
                             <constraint firstItem="Gwm-UP-WQO" firstAttribute="baseline" secondItem="5Da-Ff-ow8" secondAttribute="baseline" type="default" id="4ZG-UB-4KL"/>
                             <constraint firstItem="I76-lJ-IZ6" firstAttribute="top" secondItem="mor-dp-uor" secondAttribute="top" type="default" id="6Gl-tf-PoC"/>
                             <constraint firstItem="I76-lJ-IZ6" firstAttribute="baseline" secondItem="mor-dp-uor" secondAttribute="baseline" type="default" id="9WJ-PO-ThV"/>
-                            <constraint firstAttribute="bottom" secondItem="QDK-uh-DtR" secondAttribute="bottom" constant="44" id="9tM-cv-GFU"/>
                             <constraint firstItem="mor-dp-uor" firstAttribute="baseline" secondItem="LfQ-Tq-lko" secondAttribute="baseline" type="default" id="DEo-ot-2Kx"/>
                             <constraint firstItem="ThS-Ev-Xws" firstAttribute="leading" secondItem="VjR-i8-Jtw" secondAttribute="leading" type="default" id="FVj-tS-Kaa"/>
                             <constraint firstItem="VjR-i8-Jtw" firstAttribute="leading" secondItem="hMa-x9-3Kh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="FYq-XF-8q1"/>
+                            <constraint firstItem="QDK-uh-DtR" firstAttribute="centerX" secondItem="6NA-VZ-IDr" secondAttribute="centerX" type="default" id="FYt-8i-URi"/>
                             <constraint firstItem="GZq-Fg-LaN" firstAttribute="top" secondItem="DyJ-hC-x8y" secondAttribute="top" type="default" id="Fjc-LU-Ydv"/>
                             <constraint firstAttribute="trailing" secondItem="ThS-Ev-Xws" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GCi-RL-PLl"/>
                             <constraint firstAttribute="trailing" secondItem="VjR-i8-Jtw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HK6-fq-cBm"/>
+                            <constraint firstAttribute="bottom" secondItem="QDK-uh-DtR" secondAttribute="bottom" constant="53" id="JIp-h9-hIy"/>
                             <constraint firstAttribute="trailing" secondItem="5Ac-CV-wV8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="NDF-lD-8FE"/>
+                            <constraint firstItem="dVv-NB-u8l" firstAttribute="leading" secondItem="6NA-VZ-IDr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OwG-nx-0em"/>
                             <constraint firstItem="VPn-V0-sVd" firstAttribute="centerY" secondItem="Arn-ls-THr" secondAttribute="centerY" type="default" id="Qhh-yb-UnF"/>
                             <constraint firstItem="VPn-V0-sVd" firstAttribute="leading" secondItem="5Ac-CV-wV8" secondAttribute="leading" type="default" id="Ra3-h5-LJE"/>
                             <constraint firstItem="VjR-i8-Jtw" firstAttribute="top" secondItem="6NA-VZ-IDr" secondAttribute="top" constant="61" id="Sh8-yw-q4R"/>
                             <constraint firstItem="I76-lJ-IZ6" firstAttribute="leading" secondItem="mor-dp-uor" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="TmB-jU-Sjf"/>
+                            <constraint firstAttribute="bottom" secondItem="dVv-NB-u8l" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="VXz-Tq-rJg"/>
                             <constraint firstItem="LfQ-Tq-lko" firstAttribute="leading" secondItem="6NA-VZ-IDr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Vqa-ab-nDv"/>
                             <constraint firstItem="ThS-Ev-Xws" firstAttribute="leading" secondItem="mor-dp-uor" secondAttribute="leading" type="default" id="VwH-Oe-1eQ"/>
                             <constraint firstAttribute="bottom" secondItem="mor-dp-uor" secondAttribute="bottom" constant="122" id="WaM-XS-SON"/>
@@ -602,6 +617,7 @@
                         <color key="backgroundColor" red="0.92549026010000002" green="0.87843143940000001" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="Q57-6I-xAl" firstAttribute="leading" secondItem="wAK-vi-KsI" secondAttribute="leading" type="default" id="12m-w7-14f"/>
+                            <constraint firstItem="csT-SV-wun" firstAttribute="top" secondItem="2dF-ad-8d4" secondAttribute="top" constant="50" id="4Qk-MT-5S2"/>
                             <constraint firstAttribute="bottom" secondItem="wAK-vi-KsI" secondAttribute="bottom" constant="134" id="6PQ-md-7BQ"/>
                             <constraint firstItem="wAK-vi-KsI" firstAttribute="top" secondItem="x3O-bU-HkP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BZS-zV-2RX"/>
                             <constraint firstAttribute="bottom" secondItem="Q57-6I-xAl" secondAttribute="bottom" constant="58" id="Fj2-Yt-sNJ"/>
@@ -616,11 +632,10 @@
                             <constraint firstItem="sPP-Kn-wrz" firstAttribute="leading" secondItem="2dF-ad-8d4" secondAttribute="leading" constant="86" id="ZKe-Sj-7X4"/>
                             <constraint firstItem="zWl-TY-Qim" firstAttribute="leading" secondItem="2dF-ad-8d4" secondAttribute="leading" constant="21" id="d6r-xe-Fyw"/>
                             <constraint firstItem="67y-Ku-h6O" firstAttribute="centerY" secondItem="sPP-Kn-wrz" secondAttribute="centerY" type="default" id="eTY-d6-Kl1"/>
+                            <constraint firstItem="abC-Rt-mWK" firstAttribute="top" secondItem="2dF-ad-8d4" secondAttribute="top" constant="1" id="gEi-wK-Yri"/>
                             <constraint firstItem="H18-Uy-7JY" firstAttribute="leading" secondItem="2dF-ad-8d4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gUy-pL-t6g"/>
                             <constraint firstItem="sPP-Kn-wrz" firstAttribute="bottom" secondItem="zWl-TY-Qim" secondAttribute="bottom" type="default" id="o2z-XO-uXi"/>
-                            <constraint firstItem="csT-SV-wun" firstAttribute="top" secondItem="2dF-ad-8d4" secondAttribute="top" constant="119" id="pc5-QR-yxK"/>
                             <constraint firstAttribute="trailing" secondItem="H18-Uy-7JY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qbe-0X-2rO"/>
-                            <constraint firstItem="abC-Rt-mWK" firstAttribute="top" secondItem="2dF-ad-8d4" secondAttribute="top" constant="70" id="sqB-HI-3Pz"/>
                             <constraint firstItem="wAK-vi-KsI" firstAttribute="trailing" secondItem="Q57-6I-xAl" secondAttribute="trailing" type="default" id="wXU-g0-nwQ"/>
                             <constraint firstItem="H18-Uy-7JY" firstAttribute="top" secondItem="csT-SV-wun" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y9T-tB-DbI"/>
                         </constraints>
@@ -819,81 +834,6 @@
         <image name="line.png" width="595" height="42"/>
         <image name="speech bubble .png" width="280" height="245"/>
     </resources>
-    <classes>
-        <class className="DetailTextsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailTextsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-            </relationships>
-        </class>
-        <class className="LogInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="facebookSignInButton:"/>
-                <relationship kind="action" name="googleSignInButton:"/>
-                <relationship kind="action" name="logInButton:"/>
-                <relationship kind="action" name="signUpButton:"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameOrEmailTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ShareTextsCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShareTextsCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateSentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numberOfPicsSentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recipientSentLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ShareTextsFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShareTextsFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addConversationButton:"/>
-                <relationship kind="action" name="back:"/>
-                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SignUpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToSignInButton:"/>
-                <relationship kind="action" name="submitButton:"/>
-                <relationship kind="outlet" name="emailSignUpTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lastNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordSignUpTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="TestTableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestTableCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="genderLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lastNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="WelcomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signInWelcomeButton:"/>
-                <relationship kind="action" name="signUpWelcomeButton:"/>
-            </relationships>
-        </class>
-        <class className="testTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/testTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
