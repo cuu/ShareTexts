@@ -400,6 +400,8 @@
 
 		}
 		
+		recipientName = modalTextField.text;
+		
 		[self removePopUp];
 		
 		// Set our email message body
@@ -414,8 +416,8 @@
 		controller.mailComposeDelegate = self;
 		controller.navigationBar.tintColor = [UIColor blackColor];
 		[controller setMessageBody:htmlMsg isHTML:NO];
-		//[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
-			[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
+		[controller setToRecipients:[NSArray arrayWithObjects:@"mike_chen7@hotmail.com", nil]];
+		//	[controller setToRecipients:[NSArray arrayWithObjects:@"stavros81@gmail.com", nil]];
     
 		
 		// Pull the image from ALAsset
@@ -488,10 +490,14 @@
             history = [NSArray array];
         }
         
-        NSDictionary *currentEmail = @{@"recipeint": self.recipientTextField.text,
-                                       @"numberOfPicsSent": @(self.selectedAssets.count),
-                                       @"date" : dateAndTime
-                                       };
+//        NSDictionary *currentEmail = @{@"recipeint": self.recipientTextField.text,
+//                                       @"numberOfPicsSent": @(self.selectedAssets.count),
+//                                       @"date" : dateAndTime
+//                                       };
+				NSDictionary *currentEmail = @{@"recipeint": recipientName,
+																	 @"numberOfPicsSent": @(self.selectedAssets.count),
+																	 @"date" : dateAndTime
+																	 };
         
         history = [history arrayByAddingObject:currentEmail];
         [defaults setObject:history forKey:@"convoHisotry"];

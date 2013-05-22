@@ -26,6 +26,7 @@
 		
 		UITextField *modalTextField;
 
+		NSString *recipientName;
 }
 
 @property (strong) ALAssetsGroup *assetsGroup;
